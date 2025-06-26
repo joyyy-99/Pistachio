@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pistachio by Masala Twist</title>
+  <link rel="icon" href="assets/logo/favicon.ico" type="image/x-icon"/>
+  <!-- Only Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            pistachio: '#93BFA3',
+            'light-gray-bg': '#f9fafb',
+            'dark-font': '#1f2937',
+            'medium-gray-text': '#6b7280'
+          },
+          fontFamily: {
+            sans: ['Playfair Display','serif'],
+            serif: ['Playfair Display','serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="dist/output.css"/>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+
+  <!-- NAVBAR -->
+  <nav class="fixed inset-x-0 top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-4 py-2">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center">
+        <img src="assets/images/og-logo.png" alt="Pistachio logo" class="h-16 w-16 md:h-20 md:w-20"/>
+      </a>
+      <!-- Desktop menu + theme-toggle -->
+      <ul class="hidden md:flex items-center space-x-8 text-dark-font dark:text-white">
+        <li><a href="#home" class="hover:text-pistachio transition">Home</a></li>
+        <li class="relative group">
+          <button class="flex items-center hover:text-pistachio transition">
+            Menu <img src="assets/icons/dropdown-icon.png" class="ml-1 h-3" alt="⌄"/>
+          </button>
+          <ul class="absolute left-0 mt-2 w-44 rounded bg-white dark:bg-gray-800 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            <li><a href="#starter" class="block px-4 py-2 hover:text-pistachio">Starters</a></li>
+            <li><a href="#main-courses" class="block px-4 py-2 hover:text-pistachio">Mains</a></li>
+            <li><a href="#sides" class="block px-4 py-2 hover:text-pistachio">Sides</a></li>
+            <li><a href="#desserts" class="block px-4 py-2 hover:text-pistachio">Desserts</a></li>
+          </ul>
+        </li>
+        <li><a href="#story" class="hover:text-pistachio transition">Our Story</a></li>
+        <li><a href="#feedback" class="hover:text-pistachio transition">Feedback</a></li>
+        <li>
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+            <img id="theme-icon" src="assets/icons/dark-mode-icon.png" class="h-5 w-5" alt="Toggle theme"/>
+          </button>
+        </li>
+      </ul>
+      <!-- Mobile theme + menu button -->
+      <div class="md:hidden flex items-center space-x-2">
+        <button id="theme-toggle-mobile" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+          <img id="theme-icon-mobile" src="assets/icons/dark-mode-icon.png" class="h-5 w-5" alt="Toggle theme"/>
+        </button>
+        <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+          <img src="assets/icons/hamburger-icon-menu.png" class="h-6 w-6" alt="Open menu"/>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900">
+      <ul class="space-y-2 px-4 py-6 text-dark-font dark:text-white">
+        <li><a href="#home" class="block hover:text-pistachio">Home</a></li>
+        <li><a href="#starter" class="block hover:text-pistachio">Starters</a></li>
+        <li><a href="#main-courses" class="block hover:text-pistachio">Main Courses</a></li>
+        <li><a href="#sides" class="block hover:text-pistachio">Sides</a></li>
+        <li><a href="#desserts" class="block hover:text-pistachio">Desserts</a></li>
+        <li><a href="#story" class="block hover:text-pistachio">Our Story</a></li>
+        <li><a href="#feedback" class="block hover:text-pistachio">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="relative h-screen w-full overflow-hidden pt-16">
+    <div class="absolute inset-0">
+      <div class="hero-slide active absolute inset-0 transition-opacity duration-1000">
+        <img src="assets/images/Hero-img-1.webp" class="w-full h-full object-cover" alt="Slide 1"/>
+      </div>
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img src="assets/images/Hero-img-2.webp" class="w-full h-full object-cover" alt="Slide 2"/>
+      </div>
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img src="assets/images/Hero-img-3.webp" class="w-full h-full object-cover" alt="Slide 3"/>
+      </div>
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img src="assets/images/Hero-img-4.webp" class="w-full h-full object-cover" alt="Slide 4"/>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
+      <h1 class="flex items-baseline font-serif text-white mb-4 text-5xl md:text-6xl">
+        <span class="text-pistachio">Pistachio</span>
+        <span class="ml-4 text-xl md:text-2xl font-normal text-pistachio">by Masala Twist</span>
+      </h1>
+      <p class="text-white text-lg md:text-xl max-w-2xl mb-6">
+        A refined fusion of Indian and Middle Eastern flavours.
+      </p>
+      <a href="#story" class="inline-block bg-pistachio hover:bg-pistachio/90 text-white px-8 py-3 rounded-full font-medium transition">
+        Explore Our Brand
+      </a>
+    </div>
+    <div class="absolute bottom-6 w-full flex justify-center space-x-2 z-20">
+      <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-100 transition-opacity duration-300"></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300"></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300"></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300"></button>
+    </div>
+  </section>
+
+
