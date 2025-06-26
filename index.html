@@ -269,6 +269,79 @@
   <img src="assets/icons/chatbot-floating-icon.png" class="w-6 h-6" alt="Chatbot Icon"/>
 </div>
 
+<!-- FOOTER -->
+<footer class="bg-light-gray-bg dark:bg-gray-900 text-dark-font dark:text-gray-300">
+  <!-- Top row: 5 columns -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+    <!-- Logo -->
+    <div class="flex flex-col items-start space-y-1">
+      <img src="assets/logo/android-chrome-192x192.png" alt="Pistachio Logo" class="h-22"/>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="font-semibold mb-3">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#home"      class="hover:text-pistachio transition">Home</a></li>
+        <li><a href="#menu-taste" class="hover:text-pistachio transition">Menu</a></li>
+        <li><a href="#story"     class="hover:text-pistachio transition">Our Story</a></li>
+        <li><a href="#feedback"  class="hover:text-pistachio transition">Feedback</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Us -->
+    <div>
+      <h4 class="font-semibold mb-3">Contact Us</h4>
+      <ul class="space-y-2 text-sm">
+        <li class="flex items-center gap-2">
+          <img src="assets/icons/location-pin-footer.png" class="h-4 w-4" alt="Location"/>
+          14 Riversdale Drive, Nairobi
+        </li>
+        <li class="flex items-center gap-2">
+          <img src="assets/icons/contact-icon-footer.png" class="h-4 w-4" alt="Phone"/>
+          +254 712 345678
+        </li>
+        <li class="flex items-center gap-2">
+          <img src="assets/icons/email-icon-footer.png" class="h-4 w-4" alt="Email"/>
+          info@pistachio.com
+        </li>
+      </ul>
+    </div>
+
+    <!-- Opening Hours -->
+    <div>
+      <h4 class="font-semibold mb-3">Opening Hours</h4>
+      <ul class="space-y-2 text-sm">
+        <li>Mon–Fri: 11:00 AM – 10:00 PM</li>
+        <li>Sat–Sun: 12:00 PM – 11:00 PM</li>
+      </ul>
+    </div>
+
+    <!-- Map -->
+    <div>
+      <h4 class="font-semibold mb-3">Location</h4>
+      <div class="w-full h-24 rounded overflow-hidden">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.82664530064!2d36.78229861475459!3d-1.2777174990666904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10b7b1b3b1b1%3A0x6d8f1e5a7b7e5a7b!2s14%20Riversdale%20Dr%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+          class="w-full h-full border-0"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer + social -->
+  <div class="border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-center justify-center text-sm text-medium-gray-text dark:text-gray-400">
+      <p>
+        Disclaimer: This is a student project. All images and brand references belong to Pistachio by Masala Twist.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
 <!-- CHATBOT UI -->
 <div
   id="chatbot-ui"
@@ -296,7 +369,6 @@
         </p>
       </div>
     </div>
-    <!-- more messages here… -->
   </div>
 
   <!-- Quick Suggestions -->
@@ -335,11 +407,8 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <div class="text-center py-2 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700">
-    Powered by AI
-  </div>
-</div>
+  
+
 
   <script src="scripts/main.js"></script>
 </body>
