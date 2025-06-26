@@ -19,7 +19,10 @@
             'dark-font': '#1f2937',
             'medium-gray-text': '#6b7280',
             'dark-bg': '#121212',
-            'navbar-dark': '#2E2E2E'
+            'navbar-dark': '#2E2E2E',
+            'input-dark': '#D9D9D9',
+            'feedback-dark': '#6D6D6D',
+            'brand-light': '#FAF9F6'
           },
           fontFamily: {
             sans: ['Playfair Display','serif'],
@@ -34,11 +37,11 @@
 <body class="bg-white text-gray-900 dark:bg-navbar-dark dark:text-white">
 
   <!-- NAVBAR -->
-  <nav class="fixed inset-x-0 top-0 z-50 bg-white dark:bg-navbar-dark shadow-md">
+  <nav class="fixed inset-x-0 top-0 z-50 bg-brand-light dark:bg-navbar-dark shadow-md">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-4 py-2">
       <!-- Logo -->
       <a href="#home" class="flex items-center">
-        <img src="assets/images/og-logo.png" alt="Pistachio logo" class="h-16 w-16 md:h-20 md:w-20"/>
+        <img src="assets/images/logo-image.png" alt="Pistachio logo" class="h-16 w-16 md:h-20 md:w-20"/>
       </a>
       <!-- Desktop menu + theme-toggle -->
       <ul class="hidden md:flex items-center space-x-8 text-dark-font dark:text-white">
@@ -47,7 +50,7 @@
           <button class="flex items-center hover:text-pistachio transition">
             Menu <img src="assets/icons/dropdown-icon.png" class="ml-1 h-3" alt="⌄"/>
           </button>
-          <ul class="absolute left-0 mt-2 w-44 rounded bg-white dark:bg-gray-700 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+          <ul class="absolute left-0 mt-2 w-44 rounded bg-white dark:bg-navbar-dark shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
             <li><a href="#starter" class="block px-4 py-2 hover:text-pistachio">Starters</a></li>
             <li><a href="#main-courses" class="block px-4 py-2 hover:text-pistachio">Mains</a></li>
             <li><a href="#sides" class="block px-4 py-2 hover:text-pistachio">Sides</a></li>
@@ -73,7 +76,7 @@
       </div>
     </div>
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-navbar-dark">
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-light dark:bg-navbar-dark">
       <ul class="space-y-2 px-4 py-6 text-dark-font dark:text-white">
         <li><a href="#home" class="block hover:text-pistachio">Home</a></li>
         <li><a href="#starter" class="block hover:text-pistachio">Starters</a></li>
@@ -123,79 +126,100 @@
   </section>
 
   <!-- MENU TASTE -->
-<section id="menu-taste" class="py-16 bg-white dark:bg-navbar-dark">
+<!-- MENU TASTE SECTION -->
+<section id="menu-taste" class="py-16 bg-light-gray-bg dark:bg-gray-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- header -->
-    <div class="mb-12 text-center">
+    <!-- Section Header -->
+    <div class="mb-8 text-center">
       <img src="assets/icons/menu-section.png" alt="Menu Icon" class="h-6 mx-auto mb-2"/>
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark-font dark:text-white">
         A Taste of <span class="text-pistachio">Pistachio</span>
       </h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Main Course: tall panel on left -->
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Main Course (large) -->
       <div class="relative group overflow-hidden rounded-lg shadow-lg">
-        <img src="assets/images/menu-preview/main-course.jpg"
-             alt="Main Course"
-             class="w-full h-[600px] object-cover transition-transform duration-500 group-hover:scale-105"/>
-        <div class="absolute inset-0 bg-black/50 flex flex-col justify-center px-6 py-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <h3 class="text-2xl font-semibold text-white mb-3">Main-Course</h3>
-          <p class="text-white italic mb-2">
-            "Our hearty mains are crafted with rich, aromatic spices, from paneer curries to biryanis…"
+        <img
+          src="assets/images/menu-preview/main-course.jpg"
+          alt="Main Course"
+          class="w-full h-[600px] object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div
+          class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-4 rounded-lg max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <h3 class="text-lg font-semibold font-serif text-dark-font mb-1">Main-Course</h3>
+          <p class="text-sm italic text-dark-font mb-1">
+            “Our hearty mains are crafted with rich, authentic flavors - offering both vegetarian and non-vegetarian options, from classic paneer curries to grilled meats and biryanis”
           </p>
-          <p class="text-sm text-gray-200">Dish shown: Paneer Tikka Masala</p>
+          <p class="text-xs text-gray-700">Dish shown: Paneer Tikka Masala</p>
         </div>
       </div>
 
-      <!-- Right column: Starter + Sides stack -->
+      <!-- Starter + Sides (stacked) -->
       <div class="space-y-8">
+        <!-- Starter -->
         <div class="relative group overflow-hidden rounded-lg shadow-lg">
-          <img src="assets/images/menu-preview/starter-img.jpg"
-               alt="Starter"
-               class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"/>
-          <div class="absolute inset-0 bg-black/40 flex flex-col justify-end px-4 py-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-xl font-semibold text-white mb-1">Starter</h3>
-            <p class="text-white italic text-sm mb-1">
-              "Begin your journey with light, flavorful starters…"
+          <img
+            src="assets/images/menu-preview/starter-img.jpg"
+            alt="Starter"
+            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-lg max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-base font-semibold text-dark-font mb-1">Starter</h3>
+            <p class="text-xs italic text-dark-font mb-1">
+              “Begin your journey with light, flavorful starters - from crispy vegetarian bites to spicy kebabs and Middle Eastern mezze.”
             </p>
-            <p class="text-xs text-gray-200">Dish shown: Seekh Kebabs</p>
+            <p class="text-2xs text-gray-700">Dish shown: Seekh Kebabs</p>
           </div>
         </div>
 
+        <!-- Sides -->
         <div class="relative group overflow-hidden rounded-lg shadow-lg">
-          <img src="assets/images/menu-preview/sides.jpg"
-               alt="Sides"
-               class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"/>
-          <div class="absolute inset-0 bg-black/40 flex flex-col justify-end px-4 py-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 class="text-xl font-semibold text-white mb-1">Sides</h3>
-            <p class="text-white italic text-sm mb-1">
-              "Complete your meal with fresh-baked breads and savory accompaniments…"
+          <img
+            src="assets/images/menu-preview/sides.jpg"
+            alt="Sides"
+            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-lg max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-base font-semibold text-dark-font mb-1">Sides</h3>
+            <p class="text-xs italic text-dark-font mb-1">
+              “Complete your meal with fresh-baked breads, seasoned rice and savory accompaniments to pair perfectly with every main.”
             </p>
-            <p class="text-xs text-gray-200">Dish shown: Garlic Naan</p>
+            <p class="text-2xs text-gray-700">Dish shown: Garlic Naan</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Full-width Dessert row -->
+    <!-- Dessert (full width) -->
     <div class="relative group mt-12 overflow-hidden rounded-lg shadow-lg">
-      <img src="assets/images/menu-preview/dessert.jpg"
-           alt="Dessert"
-           class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"/>
-      <div class="absolute inset-0 bg-black/50 flex flex-col justify-center px-8 py-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <h3 class="text-2xl font-semibold text-white mb-3">Desserts</h3>
-        <p class="text-white italic mb-2">
-          "A sweet ending awaits with indulgent Indian and Middle Eastern treats…"
+      <img
+        src="assets/images/menu-preview/dessert.jpg"
+        alt="Dessert"
+        class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div
+        class="absolute bottom-6 left-6 bg-white/70 backdrop-blur-sm p-5 rounded-lg max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <h3 class="text-xl font-semibold text-dark-font mb-1">Desserts</h3>
+        <p class="italic text-sm text-dark-font mb-1">
+          “A sweet ending awaits with indulgent Indian and Middle Eastern treats - rich kulfi, delicate pastries and fusion flavors you will remember.”
         </p>
-        <p class="text-sm text-gray-200">Dish shown: Pistachio Kulfi & Cream</p>
+        <p class="text-xs text-gray-700">Dish shown: Pistachio Kulfi & Cream</p>
       </div>
     </div>
 
-    <!-- CTA -->
+    <!-- Call to action -->
     <div class="text-center mt-12">
-      <a href="#"
-         class="inline-block bg-pistachio hover:bg-pistachio/90 text-white font-medium px-8 py-3 rounded-full transition">
+      <a
+        href="#"
+        class="inline-block bg-pistachio hover:bg-pistachio/90 text-white font-medium px-8 py-3 rounded-full transition"
+      >
         View The Full Menu &rarr;
       </a>
     </div>
@@ -204,7 +228,7 @@
 
 
 <!-- OUR STORY SECTION -->
-<section id="story" class="py-16 bg-white dark:bg-navbar-dark">
+<section id="story" class="py-16 bg-brand-light dark:bg-feedback-dark">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section header -->
     <div class="mb-8 flex items-center space-x-2">
@@ -215,8 +239,16 @@
     </div>
     <!-- Two-column grid -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- IMAGE COLUMN -->
+      <div class="flex justify-center lg:justify-start lg:order-1 order-2">
+        <img
+          src="assets/images/Story-section-img.png"
+          alt="Serving food"
+          class="w-full max-w-md rounded-lg shadow-lg object-cover"
+        />
+      </div>
       <!-- TEXT COLUMN -->
-      <div>
+      <div class="lg:order-2 order-1">
         <p class="text-lg text-dark-font dark:text-gray-300 mb-4">
             At <span class="text-pistachio font-semibold">Pistachio by Masala Twist</span>, food is more than a flavor – it's a feeling.
         </p>
@@ -250,15 +282,6 @@
           </li>
         </ul>
       </div>
-
-      <!-- IMAGE COLUMN -->
-      <div class="flex justify-center lg:justify-end">
-        <img
-          src="assets/images/Story-section-img.png"
-          alt="Serving food"
-          class="w-full max-w-md rounded-lg shadow-lg object-cover"
-        />
-      </div>
     </div>
   </div>
 </section>
@@ -272,18 +295,18 @@
 </div>
 
 <!-- FOOTER -->
-<footer class="bg-light-gray-bg dark:bg-navbar-dark text-dark-font dark:text-gray-300">
+<footer class="bg-brand-light dark:bg-feedback-dark text-dark-font dark:text-gray-300">
   <!-- Top row: 5 columns -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
     <!-- Logo -->
     <div class="flex flex-col items-start space-y-1">
-      <img src="assets/logo/android-chrome-192x192.png" alt="Pistachio Logo" class="h-22"/>
+      <img src="assets/images/logo-image.png" alt="Pistachio Logo" class="h-32 md:h-40 lg:h-44 xl:h-48"/>
     </div>
 
     <!-- Quick Links -->
     <div>
-      <h4 class="font-semibold mb-3">Quick Links</h4>
-      <ul class="space-y-2 text-sm">
+      <h4 class="font-semibold mb-2">Quick Links</h4>
+      <ul class="space-y-1 text-sm">
         <li><a href="#home"      class="hover:text-pistachio transition">Home</a></li>
         <li><a href="#menu-taste" class="hover:text-pistachio transition">Menu</a></li>
         <li><a href="#story"     class="hover:text-pistachio transition">Our Story</a></li>
@@ -293,8 +316,8 @@
 
     <!-- Contact Us -->
     <div>
-      <h4 class="font-semibold mb-3">Contact Us</h4>
-      <ul class="space-y-2 text-sm">
+      <h4 class="font-semibold mb-2">Contact Us</h4>
+      <ul class="space-y-1 text-sm">
         <li class="flex items-center gap-2">
           <img src="assets/icons/location-pin-footer.png" class="h-4 w-4" alt="Location"/>
           14 Riversdale Drive, Nairobi
@@ -312,8 +335,8 @@
 
     <!-- Opening Hours -->
     <div>
-      <h4 class="font-semibold mb-3">Opening Hours</h4>
-      <ul class="space-y-2 text-sm">
+      <h4 class="font-semibold mb-2">Opening Hours</h4>
+      <ul class="space-y-1 text-sm">
         <li>Mon–Fri: 11:00 AM – 10:00 PM</li>
         <li>Sat–Sun: 12:00 PM – 11:00 PM</li>
       </ul>
@@ -321,8 +344,8 @@
 
     <!-- Map -->
     <div>
-      <h4 class="font-semibold mb-3">Location</h4>
-      <div class="w-full h-24 rounded overflow-hidden">
+      <h4 class="font-semibold mb-2">Location</h4>
+      <div class="w-full h-32 rounded overflow-hidden">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.82664530064!2d36.78229861475459!3d-1.2777174990666904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10b7b1b3b1b1%3A0x6d8f1e5a7b7e5a7b!2s14%20Riversdale%20Dr%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
           class="w-full h-full border-0"
@@ -335,7 +358,7 @@
 
   <!-- Disclaimer + social -->
   <div class="border-t border-gray-200 dark:border-gray-600">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-center justify-center text-sm text-medium-gray-text dark:text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row items-center justify-center text-sm text-medium-gray-text dark:text-gray-400">
       <p>
         Disclaimer: This is a student project. All images and brand references belong to Pistachio by Masala Twist.
       </p>
