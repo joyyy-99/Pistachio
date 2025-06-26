@@ -1,5 +1,3 @@
-// scripts/main.js
-
 document.addEventListener('DOMContentLoaded', () => {
   // —— HERO SLIDER ——
   const slides = document.querySelectorAll('.hero-slide');
@@ -29,6 +27,53 @@ document.addEventListener('DOMContentLoaded', () => {
       sliderInterval = setInterval(() => showSlide(current + 1), 5000);
     });
   });
+
+
+  // —— MOBILE MENU ——
+  const mobileBtn = document.getElementById('mobile-menu-button');
+  const mobileNav = document.getElementById('mobile-menu');
+  mobileBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('hidden');
+  });
+
+
+  // —— THEME TOGGLE (DESKTOP & MOBILE) ——
+  const btnDesktop = document.getElementById('theme-toggle');
+  const btnMobile  = document.getElementById('theme-toggle-mobile');
+  const iconDesk   = document.getElementById('theme-icon');
+  const iconMob    = document.getElementById('theme-icon-mobile');
+
+  function applyTheme(mode) {
+    if (mode === 'dark') {
+      document.documentElement.classList.add('dark');
+      iconDesk.src = 'assets/icons/light-mode-icon.png';
+      iconMob.src  = 'assets/icons/light-mode-icon.png';
+      localStorage.theme = 'dark';
+    } else {
+      document.documentElement.classList.remove('dark');
+      iconDesk.src = 'assets/icons/dark-mode-icon.png';
+      iconMob.src  = 'assets/icons/dark-mode-icon.png';
+      localStorage.theme = 'light';
+    }
+  }
+
+  [btnDesktop, btnMobile].forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark ? 'light' : 'dark');
+    });
+  });
+
+  // on load: respect saved preference or system
+  if (
+    localStorage.theme === 'dark' ||
+    (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    applyTheme('dark');
+  } else {
+    applyTheme('light');
+  }
+
 
   // —— CHATBOT UI TOGGLE & CLOSE ——
   const chatToggle = document.getElementById('chatbot-toggle');
