@@ -261,5 +261,86 @@
   </div>
 </section>
 
+ <!-- CHATBOT TOGGLE BUTTON -->
+<div
+  id="chatbot-toggle"
+  class="fixed bottom-6 right-6 z-50 bg-pistachio hover:bg-pistachio/90 p-4 rounded-full shadow-lg cursor-pointer transition-all duration-300"
+>
+  <img src="assets/icons/chatbot-floating-icon.png" class="w-6 h-6" alt="Chatbot Icon"/>
+</div>
 
- 
+<!-- CHATBOT UI -->
+<div
+  id="chatbot-ui"
+  class="hidden fixed right-6 top-20 bottom-24 w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl z-50 border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden"
+>
+  <!-- Header -->
+  <div class="bg-pistachio text-white p-4 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="assets/icons/chatbot-floating-icon.png" class="w-8 h-8" alt="Bot Icon"/>
+      <div>
+        <h3 class="font-semibold text-sm">Pistachio Assistant</h3>
+        <p class="text-xs opacity-90">Ask me anything!</p>
+      </div>
+    </div>
+    <button id="close-chatbot" class="text-white hover:text-gray-200 text-xl font-bold">&times;</button>
+  </div>
+
+  <!-- Messages (this flex-1 area will scroll) -->
+  <div id="chatbot-messages" class="flex-1 overflow-y-auto p-4 space-y-4">
+    <div class="flex items-start space-x-2">
+      <img src="assets/icons/chatbot-floating-icon.png" class="w-6 h-6 mt-1" alt="Bot"/>
+      <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 max-w-xs">
+        <p class="text-sm text-gray-800 dark:text-gray-200">
+          Hi there! How can I help you today?
+        </p>
+      </div>
+    </div>
+    <!-- more messages here… -->
+  </div>
+
+  <!-- Quick Suggestions -->
+  <div class="px-4 pb-2">
+    <div class="flex flex-wrap gap-2">
+      <button class="chatbot-suggestion bg-gray-100 dark:bg-gray-700 hover:bg-pistachio/10 text-xs px-3 py-2 rounded-full text-dark-font dark:text-gray-300">
+        Vegetarian options?
+      </button>
+      <button class="chatbot-suggestion bg-gray-100 dark:bg-gray-700 hover:bg-pistachio/10 text-xs px-3 py-2 rounded-full text-dark-font dark:text-gray-300">
+        Signature dishes?
+      </button>
+      <button class="chatbot-suggestion bg-gray-100 dark:bg-gray-700 hover:bg-pistachio/10 text-xs px-3 py-2 rounded-full text-dark-font dark:text-gray-300">
+        Opening hours?
+      </button>
+      <button class="chatbot-suggestion bg-gray-100 dark:bg-gray-700 hover:bg-pistachio/10 text-xs px-3 py-2 rounded-full text-dark-font dark:text-gray-300">
+        Spicy food?
+      </button>
+    </div>
+  </div>
+
+  <!-- Input Area -->
+  <div class="border-t border-gray-200 dark:border-gray-700 p-4">
+    <div class="flex items-center space-x-2">
+      <input
+        type="text"
+        id="chatbot-input"
+        placeholder="Ask me anything about Pistachio..."
+        class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-full bg-white dark:bg-gray-700 text-dark-font dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-pistachio focus:border-pistachio text-sm"
+      />
+      <button id="send-message" class="bg-pistachio hover:bg-pistachio/90 text-white p-2 rounded-full transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="text-center py-2 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700">
+    Powered by AI
+  </div>
+</div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
