@@ -7,6 +7,9 @@
   <link rel="icon" href="assets/logo/favicon.ico" type="image/x-icon"/>
   <!-- Only Playfair Display -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Konkhmer+Sleokchher&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -26,7 +29,8 @@
           },
           fontFamily: {
             sans: ['Playfair Display','serif'],
-            serif: ['Playfair Display','serif']
+            serif: ['Playfair Display','serif'],
+            inter: ['Inter', 'Arial']
           }
         }
       }
@@ -294,53 +298,55 @@
   </section>
 
   <!-- DISHES SECTION -->
-  <section id="dishes" class = "p-20">
-    <div id = "dishes-section " class = "mt-20 md:text-2xl mt-50 mb-20">
-      <div id="dishesheader" class = "flex flex-row items-center p-1 justify-center ">
+  <section id="dishes" class = "px-10 py-20">
+    <div id = "dishes-section" class = "mt-20 md:text-2xl mb-20">
+      <div id="dishesheader" class = "flex flex-row items-center p-1 justify-center mb-5">
         <img src="./assets/icons/signature-dishes-section.png" alt="">
-        <p class = "ml-2 text-3xl md:text-2xl font-normal text-center">Dishes</p>
+        <p class = "ml-2 mt-0 text-3xl md:text-2xl font-normal text-center">Dishes</p>
       </div>
-      <p class = "text-center p-1 text-3xl">
+      <h2 class = "text-center mt-0 mb-3 text-3xl md:text-4xl font-serif font-bold text-dark-font dark:text-white">
         Our 
         <span class = "text-pistachio">Signature</span>
         Dishes
+      </h2>
+      <p class = "text-center font-semibold text-gray-500 p-1 dark:text-gray-400 mb-8">
+        Pistachio’s most celebrated creations - curated for flavor, flair and finesse
       </p>
-      <p class = "text-center whitespace-nowrap p-1">Pistachio’s most celebrated creations - curated for flavor, flair and finesse</p>
     </div>
 
-    <div id = "dishes-img-container" class = " grid grid-rows-4 gap-10">
-      <div id = "row-one" class = "h-20 grid grid-cols-2 gap-10 md:grid-cols-4">
-        <div class="relative max-w-80 h-80 overflow-hidden shadow-lg font-serif">
+    <div id = "dishes-img-container" class = "sm: grid-cols-1 md:grid grid-rows-4 mx-auto">
+      <div id = "row-one" class = "grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="relative w-full h-60 overflow-hidden shadow-lg font-inter">
             <img src="/assets/images/signature-dishes/braised-mutton.jpg" alt="Braised Mutton" class="w-full h-full object-cover"/>
-            <div class="absolute bottom-0 w-full bg-gray-600/60 text-white p-4">
-              <h2 class="font-bold text-md">Braised Mutton Champ Maple Kokum Glaze</h2>
+            <div class="absolute bottom-0 w-full bg-[#6D6D6D]/60 min-h-[150px] text-white p-4">
+              <h2 class="font-bold text-md text-center">Braised Mutton Champ Maple Kokum Glaze</h2>
               <p class="text-sm mt-1 text-center">
                 Braised goat rack with maple and kokum syrup, kokum plant called 'garcinia indica' grown in kokan regions of Maharashtra.
               </p>
             </div>
         </div>       
-        <div class="relative max-w-80 h-80 overflow-hidden shadow-lg font-serif">
-            <img src="/assets/images/signature-dishes/braised-mutton.jpg" alt="Braised Mutton" class="w-full h-full object-cover"/>
-            <div class="absolute bottom-0 w-full bg-gray-600/60 text-white p-4">
-              <h2 class="font-bold text-md">Chilli Chicken</h2>
+        <div class="relative w-full h-60 overflow-hidden shadow-lg font-inter">
+            <img src="/assets/images/signature-dishes/chilli-chicken.jpg" alt="Chilli chicken" class="w-full h-full object-cover"/>
+            <div class="absolute bottom-0 w-full min-h-[150px] bg-[#6D6D6D]/60 text-white p-4">
+              <h2 class="font-bold text-md text-center">Chilli Chicken</h2>
               <p class="text-sm mt-1 text-center">
                 Succulent boneless chicken tossed in spicy soya chilli sauce garnished with spring onions.
               </p>
             </div>
         </div>       
-        <div class="relative max-w-80 h-80 overflow-hidden shadow-lg font-serif">
-            <img src="/assets/images/signature-dishes/braised-mutton.jpg" alt="Braised Mutton" class="w-full h-full object-cover"/>
-            <div class="absolute bottom-0 w-full bg-gray-600/60 text-white p-4">
-              <h2 class="font-bold text-md">Prawns Kolapuri</h2>
+        <div class="relative w-full h-60 overflow-hidden shadow-lg font-inter">
+            <img src="/assets/images/signature-dishes/prawns-kolapuri.jpg" alt="Prawns Kolapuri" class="w-full h-full object-cover"/>
+            <div class="absolute bottom-0 w-full min-h-[150px] bg-[#6D6D6D]/60 text-white p-4">
+              <h2 class="font-bold text-md text-center">Prawns Kolapuri</h2>
               <p class="text-sm mt-1 text-center">
                 A classic dish of prawns sautéed with intensely spicy kolapuri spices.
               </p>
             </div>
         </div>       
-        <div class="relative max-w-80 h-80 overflow-hidden shadow-lg font-serif">
-            <img src="/assets/images/signature-dishes/braised-mutton.jpg" alt="Braised Mutton" class="w-full h-full object-cover"/>
-            <div class="absolute bottom-0 w-full bg-gray-600/60 text-white p-4">
-              <h2 class="font-bold text-md">Fish Chilli Fry</h2>
+        <div class="relative w-full h-60 overflow-hidden shadow-lg font-inter">
+            <img src="/assets/images/signature-dishes/fish-chilli-fry.jpg" alt="Braised Mutton" class="w-full h-full object-cover"/>
+            <div class="absolute bottom-0 w-full min-h-[150px] bg-[#6D6D6D]/60 text-white p-4">
+              <h2 class="font-bold text-md text-center">Fish Chilli Fry</h2>
               <p class="text-sm mt-1 text-center">
                 Red snapper marinated with chinese spices deep fried, tossed with bell pepper, onion and a dash of lemon.
               </p>
@@ -350,7 +356,7 @@
       <div id = "row-2" class = "row-span-2 w-full grid grid-cols-2 gap-10">
         <div class = "relative w-full h-full">
           <img src="/assets/images/signature-dishes/chicken-biryani.jpg" alt="chicken-biryani" class = "w-full h-full object-cover">
-          <div class = "flex items-center text-center bg-gray-600/60 absolute right-1/2 left-0 top-0 bottom-0">
+          <div class = "flex items-center text-center bg-[#6D6D6D]/60 absolute right-1/2 left-0 top-0 bottom-0">
             <div>
               <h3 class = "font-bold text-md mb-3">Chicken Biryani</h3>
               <p class = "text-sm">Long grain basmati rice, succulent chicken and melange of extra Indian spices cooked in a sealed deg that keeps the flavors intact.</p>
@@ -359,7 +365,7 @@
         </div>
         <div class = "relative w-full h-full">
           <img src="/assets/images/signature-dishes/chicken-biryani.jpg" alt="chicken-biryani" class = "w-full h-full object-cover">
-          <div class = "flex items-center text-center bg-gray-600/60 absolute left-1/2 top-0 bottom-0">
+          <div class = "flex items-center text-center bg-[#6D6D6D]/60 absolute left-1/2 top-0 bottom-0">
             <div>
               <h3 class = "font-bold text-md mb-3">Chicken Biryani</h3>
               <p class = "text-sm">Long grain basmati rice, succulent chicken and melange of extra Indian spices cooked in a sealed deg that keeps the flavors intact.</p>
@@ -371,14 +377,14 @@
       <div id = "row-3" class = "w-full grid grid-cols-2 gap-10">
         <div id = "item-1" class = "relative h-1/2">
           <img src="assets/images/signature-dishes/mac-and-cheese.jpg" alt="mac and cheese" class =  "w-full h-full object-cover">
-          <div class ="w-full p-4 bg-gray-600/60 absolute flex flex-row gap-2 bottom-0">
+          <div class ="w-full p-4 bg-[#6D6D6D]0/60 absolute flex flex-row gap-2 bottom-0">
             <h3 class = "text-3xl font-bold ">Mac and Cheese</h3>
             <p>Macaroni and Cheese made in arancini dumpling served with tomato salsa–our humble take on Italian arancini.</p>
           </div>
         </div>
         <div id = "item-1" class = "relative h-1/2">
           <img src="assets/images/signature-dishes/mac-and-cheese.jpg" alt="mac and cheese" class =  "w-full h-full object-cover">
-          <div class ="w-full p-4 bg-gray-600/60 absolute flex flex-row gap-2 bottom-0">
+          <div class ="w-full p-4 bg-[#6D6D6D]/60 absolute flex flex-row gap-2 bottom-0">
             <h3 class = "text-3xl font-bold ">Mac and Cheese</h3>
             <p>Macaroni and Cheese made in arancini dumpling served with tomato salsa–our humble take on Italian arancini.</p>
           </div>
@@ -389,32 +395,36 @@
   </section>
 
   <!--REVIEWS SECTION-->
-  <section id="reviews" class = "bg-white-400 sm:p-5 md:p-7 lg:p-9">
+  <section id="reviews" class = "bg-[#FAF9F6] font-semibold sm:p-5 md:p-7 lg:p-9">
     <div class="max-w-7xl mb-10">
       <!-- Section header -->
       <div class="mb-3 flex items-center space-x-2">
         <img src="assets/icons/reviews-section.png" alt="Reviews Icon" class="h-6"/>
-        <h2 class="text-1xl md:text-2xl font-serif font-bold text-dark-font dark:text-white">
+        <h2 class="text-1xl md:text-2xl font-serif font-normal text-dark-font dark:text-white">
           Reviews
         </h2>
       </div>
-      <p class = "mt-0 text-3xl">
+      <p class = "sm:mt-0 text-2xl md:text-3xl">
         What are our 
         <span class = "text-pistachio">Guests</span>
         saying
       </p>
     </div>
-    <div id = "reviews-container" class = "flex flex-row gap-10 mb-10">
-      <div id="review-card-1" class = "bg-white text-black pl-4 pt-4 pb-2 w-full">
+    <div id = "reviews-container" class = "sm:flex flex-column md:flex-row gap-10 mb-10">
+      <div id="review-card-1" class = "bg-white text-black px-4 pt-4 pb-4 w-full">
         <div id="review-stars" class = "flex flex-row gap-2 mt-8 mb-6 ml-5">
           <img src="assets/icons/reviews-stars.png" alt="star1">
-          <img src="assets/icons/reviews-stars.png" alt="star1">
-          <img src="assets/icons/reviews-stars.png" alt="star1">
-          <img src="assets/icons/reviews-stars.png" alt="star1">
-          <img src="assets/icons/reviews-stars.png" alt="star1">
+          <img src="assets/icons/reviews-stars.png" alt="star2">
+          <img src="assets/icons/reviews-stars.png" alt="star3">
+          <img src="assets/icons/reviews-stars.png" alt="star4">
+          <img src="assets/icons/reviews-stars.png" alt="star5">
         </div>
-        <p class = "text-sm italic whitespace-nowrap ml-4 mb-4">&ldquo;The butter chicken is absolutely phenomenal. Flavorful, rich, and unforgettable! &rdquo;</p>
-        <p class = "font-bold ml-4 mb-4">&ndash; Aisha K.</p>
+        <p class = "font-inter font-normal text-sm italic whitespace-nowrap ml-4 mb-4 text-white text-lg ">
+          &ldquo;The butter chicken is absolutely phenomenal. Flavorful, rich, and unforgettable! &rdquo;
+        </p>
+        <p class = "font-inter font-bold ml-4 mb-4">
+          &ndash; Aisha K.
+        </p>
       </div>
       <div id="review-card-2" class = "bg-white text-black pl-4 pt-4 pb-2 rounded w-full">
         <div id="review-stars" class = "flex flex-row gap-2 mt-8 mb-6 ml-5">
@@ -424,8 +434,12 @@
           <img src="assets/icons/reviews-stars.png" alt="star1">
           <img src="assets/icons/reviews-stars.png" alt="star1">
         </div>
-        <p class = "text-sm italic font-normal ml-4 mb-4">&ldquo; Loved the ambiance and warm service. Definitely coming back.&rdquo;</p>
-        <p class = "font-bold ml-4 mb-4">&ndash; Aisha K.</p>
+        <p class = "font-inter italic text-sm italic font-normal ml-4 mb-4">
+          &ldquo; Loved the ambiance and warm service. Definitely coming back.&rdquo;
+        </p>
+        <p class = "font-inter font-bold ml-4 mb-4">
+          &ndash; David M.
+        </p>
       </div>
 
     </div>
@@ -448,7 +462,7 @@
           <form action="">
               <fieldset>
                 <p class = "mb-4 bg-black/0">
-                  <input class = "w-5/6 bg-black/0 px-5 py-3 border-white border-solid border rounded-md" type = "fullName" name = "fullName" id = "fullName" placeholder = "Full name" required autofocus autocomplete = "on">
+                  <input class = "w-5/6 bg-black/0 px-5 py-3 border-white border-solid border rounded-md" type = "fullName" name = "fullName" id = "fullName" placeholder = "Full name" required autocomplete = "on">
                 </p>
                 <p class = "mb-4 bg-black/0">
                   <input class = "w-5/6 bg-black/0 px-5 py-3 border-white border-solid border rounded-md" type = "email" name = "email" id = "email" placeholder = "Email">
