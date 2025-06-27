@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            pistachio: '#93BFA3',
+            'light-gray-bg': '#f9fafb',
+            'dark-font': '#1f2937',
+            'medium-gray-text': '#6b7280',
+            'dark-bg': '#121212',
+            'navbar-dark': '#2E2E2E',
+            'input-dark': '#D9D9D9',
+            'feedback-dark': '#6D6D6D',
+            'brand-light': '#FAF9F6'
+          },
+          fontFamily: {
+            sans: ['Playfair Display','serif'],
+            serif: ['Playfair Display','serif'],
+            inter: ['Inter', 'Arial']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <!-- NAVBAR -->
+    <nav class="fixed inset-x-0 top-0 z-50 bg-brand-light dark:bg-navbar-dark shadow-md">
+      <div class="max-w-9xl mx-auto flex items-center justify-between px-6 md:px-4 py-2">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center">
+          <img src="assets/images/logo-image.png" alt="Pistachio logo" class="h-16 w-16 md:h-20 md:w-20"/>
+        </a>
+        <!-- Desktop menu + theme-toggle -->
+        <ul class="hidden md:flex items-center space-x-12 text-dark-font dark:text-white">
+          <li>
+            <a href="#home" class="hover:text-pistachio transition">Home</a>
+          </li>
+          <li class="relative group">
+            <button class="flex items-center hover:text-pistachio transition">
+              Menu 
+              <img src="assets/icons/dropdown-icon.png" class="ml-1 h-3" alt="⌄"/>
+            </button>
+            <ul class="absolute left-0 w-44 rounded bg-white dark:bg-navbar-dark shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+              <li><a href="#starter" class="block px-4 py-2 hover:text-pistachio">Starters</a></li>
+              <li><a href="#main-courses" class="block px-4 py-2 hover:text-pistachio">Mains</a></li>
+              <li><a href="#sides" class="block px-4 py-2 hover:text-pistachio">Sides</a></li>
+              <li><a href="#desserts" class="block px-4 py-2 hover:text-pistachio">Desserts</a></li>
+            </ul>
+          </li>
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+            <img id="theme-icon" src="assets/icons/dark-mode-icon.png" class="h-5 w-5" alt="Toggle theme"/>
+          </button>
+        </ul>
+        
+      <!-- Mobile theme + menu button -->
+      <div class="md:hidden flex items-center space-x-2">
+        <button id="theme-toggle-mobile" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+          <img id="theme-icon-mobile" src="assets/icons/dark-mode-icon.png" class="h-5 w-5" alt="Toggle theme"/>
+        </button>
+        <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+          <img src="assets/icons/hamburger-icon-menu.png" class="h-6 w-6" alt="Open menu"/>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-light dark:bg-navbar-dark">
+      <ul class="space-y-2 px-4 py-6 text-dark-font dark:text-white">
+        <li><a href="#home" class="block hover:text-pistachio">Home</a></li>
+        <li><a href="#starter" class="block hover:text-pistachio">Starters</a></li>
+        <li><a href="#main-courses" class="block hover:text-pistachio">Main Courses</a></li>
+        <li><a href="#sides" class="block hover:text-pistachio">Sides</a></li>
+        <li><a href="#desserts" class="block hover:text-pistachio">Desserts</a></li>
+      </ul>
+    </div>
+  </nav>
+  </header>
+  <section id="dishes" class = "px-10 py-10">
+    <div id = "dishes-section" class = "mt-20 ">
+      <h2 class = "text-center mt-0 mb-3 text-5xl md:text-8xl font-serif font-bold pb-8 text-dark-font  dark:text-white">
+        Our 
+        <span class = "text-pistachio">Menu</span>
+      </h2>
+      <p class = "text-center font-medium text-gray-500 p-1 text-3xl dark:text-gray-400 pb-3 ">
+        Explore our Vibrant Indian and Middle Eastern Cuisine
+      </p>
+    </div>
+    <div id="buttons" class = "mx-auto w-full flex flex-row justify-center gap-5 mb-4">
+      <button id = "starters" class = "bg-[#E0E0DC] w-48 mt-5 px-5 py-3 rounded-3xl">Starters</button>
+      <button id = "mains" class = "bg-[#E0E0DC] w-48 mt-5 px-5 py-3 rounded-3xl">Mains</button>
+      <button id = "sides" class = "bg-[#E0E0DC] w-48 mt-5 px-5 py-3 rounded-3xl">Sides</button>
+      <button id = "desserts" class = "bg-[#E0E0DC] w-48 mt-5 px-5 py-3 rounded-3xl">Desserts</button>
+    </div>
+  </section>
+  <section id = "section-selection" class="w-full bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
+      <div id="menu-container" class="grid w-full grid-cols-1 md:grid-cols-[2fr_1fr] gap-10 px-4 md:px-12 py-8 md:py-14">
+        <!-- Row 1: Menu Items -->
+        <div id="row1" class="grid grid-cols-2 gap-8">
+          <div class="flex flex-col bg-[#FAF9F6] dark:bg-gray-800 p-0">
+            <img src="assets/images/Menu/Mains/hyderabadi-chicken.jpg" alt="Hyderabadi Chicken" class="w-full h-48 object-cover mb-24">
+            <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-10">Hyderabadi Chicken</h2>
+            <p class="text-center px-5 text-sm md:text-base font-inter text-gray-500">
+              Succulent chicken pieces cooked in tandoor simmered off with spices of Hyderabad.
+            </p>
+          </div>
+          <div class = "grid grid-rows-2">
+            <!-- Item 1 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#FAF9F6] dark:bg-gray-800 p-4 md:p-6">
+              <div class="w-full sm:w-1/2">
+                <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/butter-chicken-makhani.jpg" alt="Butter Chicken Makhani">
+              </div>
+              <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
+                <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Hand Pulled Butter Chicken Makhani</h2>
+                <p class="text-center text-sm md:text-base mt-2 font-inter text-gray-500">
+                  The most trending Indian dish across the globe which is proud of Indian cuisine! Boneless chicken cooked in tandoor served with rich makhani gravy dusted off with dehydrated fenugreek.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#E0E0DC] dark:bg-gray-800 p-4 md:p-6">
+              <div class="w-full sm:w-1/2">
+                <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/prawns-kolapuri.jpg" alt="Prawns Kolapuri">
+              </div>
+              <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
+                <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Prawns Kolapuri</h2>
+                <p class = "text-center text-sm md:text-base mt-2 font-inter text-gray-500">
+                  A classic dish of prawns sautéed with inhouse spicy kolapuri spices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="row2" class="grid grid-cols-2 gap-8">
+          <div class = "grid grid-rows-2">
+            <!-- Item 3 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#FAF9F6] dark:bg-gray-800 p-4 md:p-6">
+              <div class="w-full sm:w-1/2">
+                <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/masala-shrooms.jpg" alt="Masala Shrooms">
+              </div>
+              <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
+                <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Pan Toss Masala Shrooms Truffle Haze</h2>
+                <p class="text-center text-sm md:text-base mt-2 font-inter text-gray-500">
+                  Assorted mushrooms with cream garlic truffle oil and served with aromatic truffle oil haze.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#E0E0DC] dark:bg-gray-800 p-4 md:p-6">
+              <div class="w-full sm:w-1/2">
+                <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/paneer-bhurji.jpg" alt="Paneer Bhurji">
+              </div>
+              <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
+                <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Paneer Bhurji</h2>
+                <p class="text-center text-sm md:text-base mt-2 font-inter text-gray-500">
+                  Minced cottage cheese stir-fried with onions and tomato lightly spiced with freshly pounded coriander and chillies.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Column 2: Side Menu -->
+          <div id="column2" class="grid grid-rows-2 gap-8 content-center">
+            
+            <!-- Side Item 1 -->
+            
+
+            <!-- Side Item 2 -->
+            <div class="flex flex-col bg-[#FAF9F6] dark:bg-gray-800 p-0">
+              <img src="assets/images/Menu/Mains/amritsari.jpg" alt="Hyderabadi Chicken" class="w-full h-48 object-cover mb-24">
+              <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-10">Amritsari Malai Kofta</h2>
+              <p class="text-center text-sm md:text-base px-5 font-inter text-gray-500">
+                Cottage cheese dumplings, khoya, raisin, nuts, green chillies, cashew gravy and can be served jain on request.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+  </section>
+  <footer class="bg-brand-light dark:bg-feedback-dark text-dark-font dark:text-gray-300">
+        <!-- Top row: 5 columns -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+          <!-- Logo -->
+          <div class="flex flex-col items-start space-y-1">
+            <img src="assets/images/logo-image.png" alt="Pistachio Logo" class="h-32 md:h-40 lg:h-44 xl:h-48"/>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-semibold mb-2">Quick Links</h4>
+            <ul class="space-y-1 text-sm">
+              <li><a href="#home"      class="hover:text-pistachio transition">Home</a></li>
+              <li><a href="#menu-taste" class="hover:text-pistachio transition">Menu</a></li>
+              <li><a href="#story"     class="hover:text-pistachio transition">Our Story</a></li>
+              <li><a href="#feedback"  class="hover:text-pistachio transition">Feedback</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Us -->
+          <div>
+            <h4 class="font-semibold mb-2">Contact Us</h4>
+            <ul class="space-y-1 text-sm">
+              <li class="flex items-center gap-2">
+                <img src="assets/icons/location-pin-footer.png" class="h-4 w-4" alt="Location"/>
+                14 Riversdale Drive, Nairobi
+              </li>
+              <li class="flex items-center gap-2">
+                <img src="assets/icons/contact-icon-footer.png" class="h-4 w-4" alt="Phone"/>
+                +254 712 345678
+              </li>
+              <li class="flex items-center gap-2">
+                <img src="assets/icons/email-icon-footer.png" class="h-4 w-4" alt="Email"/>
+                info@pistachio.com
+              </li>
+            </ul>
+          </div>
+
+          <!-- Opening Hours -->
+          <div>
+            <h4 class="font-semibold mb-2">Opening Hours</h4>
+            <ul class="space-y-1 text-sm">
+              <li>Mon–Fri: 11:00 AM – 10:00 PM</li>
+              <li>Sat–Sun: 12:00 PM – 11:00 PM</li>
+            </ul>
+          </div>
+
+          <!-- Map -->
+          <div>
+            <h4 class="font-semibold mb-2">Location</h4>
+            <div class="w-full h-32 rounded overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.82664530064!2d36.78229861475459!3d-1.2777174990666904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10b7b1b3b1b1%3A0x6d8f1e5a7b7e5a7b!2s14%20Riversdale%20Dr%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                class="w-full h-full border-0"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disclaimer + social -->
+        <div class="border-t border-gray-200 dark:border-gray-600">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row items-center justify-center text-sm text-medium-gray-text dark:text-gray-400">
+            <p>
+              Disclaimer: This is a student project. All images and brand references belong to Pistachio by Masala Twist.
+            </p>
+          </div>
+        </div>
+  </footer>
+  <script src = "/scripts/main.js"></script>
+</body>
+</html>
