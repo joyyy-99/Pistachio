@@ -430,6 +430,45 @@
 
     </div>
   </section>
+  <!--  -->
+  <section id = "feedback" class = "py-20 px-10">
+    <div id = "feedback-container" class = "grid grid-cols-2 w-full gap-20 items-center">
+      <div id = "feedback-col-1" class = "">
+          <!-- Section header -->
+          <div class="mb-3 flex items-center space-x-2">
+              <img src="assets/icons/feedback-section.png" alt="Reviews Icon" class="h-6"/>
+              <h2 class="text-1xl md:text-2xl font-serif font-bold text-dark-font dark:text-white">
+                Feedback
+              </h2>    
+          </div>
+          <p class = "mt-0 text-3xl mb-6">
+              We'd love your 
+              <span class = "text-pistachio">Feedback</span>
+          </p>
+          <form action="">
+              <fieldset>
+                <p class = "mb-4 bg-black/0">
+                  <input class = "w-5/6 bg-black/0 px-5 py-3 border-white border-solid border rounded-md" type = "fullName" name = "fullName" id = "fullName" placeholder = "Full name" required autofocus autocomplete = "on">
+                </p>
+                <p class = "mb-4 bg-black/0">
+                  <input class = "w-5/6 bg-black/0 px-5 py-3 border-white border-solid border rounded-md" type = "email" name = "email" id = "email" placeholder = "Email">
+                </p>
+                <p class = "mb-4 bg-black/0">
+                  <input class = "w-5/6 bg-black/0 px-5 py-3 border-white border-solid border rounded-sm"  type="tel" name="phone" id="phone" placeholder = "Phone Number" pattern = "[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                </p>
+                <textarea class = "w-5/6 block text-black bg-black/0 px-5 py-3 border-white border-solid border rounded-sm" name="message" id="message" cols = "20" rows = "5"
+                placeholder = "Message"></textarea>
+                <button class = "bg-pistachio mt-5 px-5 py-3 rounded-md" type="submit" formaction="https://httpbin.org/post" formmethod="post">Submit Message</button>
+              </fieldset>
+          </form>
+      </div>
+      <div id = "col2" class = "">
+        <img src="assets/images/feedback-img.webp" alt="feedback-img" class = "w-full">
+      </div>
+    </div>
+
+
+  </section>
  
 
   <!-- CHATBOT TOGGLE BUTTON -->
