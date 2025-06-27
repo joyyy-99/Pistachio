@@ -35,36 +35,42 @@
   <link rel="stylesheet" href="dist/output.css"/>
 </head>
 <body class="bg-white text-gray-900 dark:bg-navbar-dark dark:text-white">
-
-  <!-- NAVBAR -->
-  <nav class="fixed inset-x-0 top-0 z-50 bg-brand-light dark:bg-navbar-dark shadow-md">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-4 py-2">
-      <!-- Logo -->
-      <a href="#home" class="flex items-center">
-        <img src="assets/images/logo-image.png" alt="Pistachio logo" class="h-16 w-16 md:h-20 md:w-20"/>
-      </a>
-      <!-- Desktop menu + theme-toggle -->
-      <ul class="hidden md:flex items-center space-x-8 text-dark-font dark:text-white">
-        <li><a href="#home" class="hover:text-pistachio transition">Home</a></li>
-        <li class="relative group">
-          <button class="flex items-center hover:text-pistachio transition">
-            Menu <img src="assets/icons/dropdown-icon.png" class="ml-1 h-3" alt="⌄"/>
-          </button>
-          <ul class="absolute left-0 mt-2 w-44 rounded bg-white dark:bg-navbar-dark shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
-            <li><a href="#starter" class="block px-4 py-2 hover:text-pistachio">Starters</a></li>
-            <li><a href="#main-courses" class="block px-4 py-2 hover:text-pistachio">Mains</a></li>
-            <li><a href="#sides" class="block px-4 py-2 hover:text-pistachio">Sides</a></li>
-            <li><a href="#desserts" class="block px-4 py-2 hover:text-pistachio">Desserts</a></li>
-          </ul>
-        </li>
-        <li><a href="#story" class="hover:text-pistachio transition">Our Story</a></li>
-        <li><a href="#feedback" class="hover:text-pistachio transition">Feedback</a></li>
-        <li>
-          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+  <header>
+    <!-- NAVBAR -->
+    <nav class="fixed inset-x-0 top-0 z-50 bg-brand-light dark:bg-navbar-dark shadow-md">
+      <div class="max-w-9xl mx-auto flex items-center justify-between px-6 md:px-4 py-2">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center">
+          <img src="assets/images/logo-image.png" alt="Pistachio logo" class="h-16 w-16 md:h-20 md:w-20"/>
+        </a>
+        <!-- Desktop menu + theme-toggle -->
+        <ul class="hidden md:flex items-center space-x-8 text-dark-font dark:text-white">
+          <li>
+            <a href="#home" class="hover:text-pistachio transition">Home</a>
+          </li>
+          <li class="relative group">
+            <button class="flex items-center hover:text-pistachio transition">
+              Menu 
+              <img src="assets/icons/dropdown-icon.png" class="ml-1 h-3" alt="⌄"/>
+            </button>
+            <ul class="absolute left-0 w-44 rounded bg-white dark:bg-navbar-dark shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+              <li><a href="#starter" class="block px-4 py-2 hover:text-pistachio">Starters</a></li>
+              <li><a href="#main-courses" class="block px-4 py-2 hover:text-pistachio">Mains</a></li>
+              <li><a href="#sides" class="block px-4 py-2 hover:text-pistachio">Sides</a></li>
+              <li><a href="#desserts" class="block px-4 py-2 hover:text-pistachio">Desserts</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#story" class="hover:text-pistachio transition">Our Story</a>
+          </li>
+          <li>
+            <a href="#feedback" class="hover:text-pistachio transition">Feedback</a>
+          </li>
+      
+        </ul>
+         <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition">
             <img id="theme-icon" src="assets/icons/dark-mode-icon.png" class="h-5 w-5" alt="Toggle theme"/>
-          </button>
-        </li>
-      </ul>
+         </button>
       <!-- Mobile theme + menu button -->
       <div class="md:hidden flex items-center space-x-2">
         <button id="theme-toggle-mobile" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition">
@@ -88,7 +94,7 @@
       </ul>
     </div>
   </nav>
-
+  </header>
   <!-- HERO SECTION -->
   <section id="home" class="relative h-screen w-full overflow-hidden pt-16 dark:bg-navbar-dark">
     <div class="absolute inset-0">
