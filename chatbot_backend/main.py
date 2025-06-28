@@ -81,12 +81,12 @@ with a focus on modern European cuisine, infused with delightful Mediterranean f
   - We also have daily specials that highlight the freshest seasonal produce.
 
 - **Locations & How to Find Us:**
-  - We have one primary location: 123 Green Street, Flavortown, KT1 4PR.
+  - We have one primary location: 14 Riversdale Drive, Nairobi.
   - We are conveniently located near the central market, easily accessible by public transport (bus routes 42, 78) and have ample street parking available.
 
 - **Booking & Reservations:**
   - Guests can reserve a table directly through our website at www.pistachiorestaurant.com/reservations.
-  - You can also call us at (020) 1234 5678 during opening hours to make a reservation.
+  - You can also call us at +254712345678 during opening hours to make a reservation.
   - We recommend booking especially for weekend dinners and large groups. Walk-ins are welcome, but subject to availability.
 
 - **Dietary & Special Menu Accommodations:**
@@ -95,10 +95,10 @@ with a focus on modern European cuisine, infused with delightful Mediterranean f
   - We have a separate allergen menu available upon request.
 
 - **Contact Information:**
-  - Phone: (020) 1234 5678
+  - Phone: +254712345678
   - Email: info@pistachiorestaurant.com
   - For catering inquiries: catering@pistachiorestaurant.com
-  - Our website contact page: www.pistachiorestaurant.com/contact
+  - Our website contact page: https://joyyy-99.github.io/Pistachio/
 
 - **Other Information:**
   - **Ambiance:** Casual yet elegant, perfect for family dinners, romantic dates, or business lunches.
