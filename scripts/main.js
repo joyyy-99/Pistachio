@@ -81,88 +81,178 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let mainEl = document.getElementById("mains");
 let sectionEl = document.getElementById("section-selection")
+let startersEl = document.getElementById("starters")
 
 mainEl.addEventListener("click", function(){
   sectionEl.innerHTML =
   `<div id="menu-container" class="grid w-full grid-cols-1 md:grid-cols-[2fr_1fr] gap-10 px-4 md:px-12 py-8 md:py-14">
 
-        <!-- Column 1: Menu Items -->
-        <div id="column1" class="grid grid-rows-4 gap-8">
-          
-          <!-- Item 1 -->
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#FAF9F6] dark:bg-gray-800 p-4 md:p-6">
-            <div class="w-full sm:w-1/2">
-              <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/butter-chicken-makhani.jpg" alt="Butter Chicken Makhani">
-            </div>
-            <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
-              <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Hand Pulled Butter Chicken Makhani</h2>
-              <p class="text-center text-sm md:text-base mt-2 font-inter text-gray-500">
-                The most trending Indian dish across the globe which is proud of Indian cuisine! Boneless chicken cooked in tandoor served with rich makhani gravy dusted off with dehydrated fenugreek.
-              </p>
-            </div>
+  <!-- Column 1: Menu Items -->
+  <div id="column1" class="grid grid-cols-1 md:grid-rows-4 gap-8">
+
+    <!-- Item 1 -->
+    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#FAF9F6] dark:bg-gray-800 p-4 md:p-6">
+      <div class="w-full sm:w-1/2">
+        <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/butter-chicken-makhani.jpg" alt="Butter Chicken Makhani">
+      </div>
+      <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
+        <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Hand Pulled Butter Chicken Makhani</h2>
+        <p class="text-center text-sm md:text-base mt-2 font-inter text-gray-500">
+          The most trending Indian dish across the globe which is proud of Indian cuisine! Boneless chicken cooked in tandoor served with rich makhani gravy dusted off with dehydrated fenugreek.
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#E0E0DC] dark:bg-gray-800 p-4 md:p-6">
+      <div class="w-full sm:w-1/2">
+        <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/prawns-kolapuri.jpg" alt="Prawns Kolapuri">
+      </div>
+      <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
+        <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Prawns Kolapuri</h2>
+        <p class="text-center text-sm md:text-base mt-2 font-inter text-gray-500">
+          A classic dish of prawns sautéed with inhouse spicy kolapuri spices.
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#FAF9F6] dark:bg-gray-800 p-4 md:p-6">
+      <div class="w-full sm:w-1/2">
+        <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/masala-shrooms.jpg" alt="Masala Shrooms">
+      </div>
+      <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
+        <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Pan Toss Masala Shrooms Truffle Haze</h2>
+        <p class="text-center text-sm md:text-base mt-2 font-inter text-gray-500">
+          Assorted mushrooms with cream garlic truffle oil and served with aromatic truffle oil haze.
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#E0E0DC] dark:bg-gray-800 p-4 md:p-6">
+      <div class="w-full sm:w-1/2">
+        <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/paneer-bhurji.jpg" alt="Paneer Bhurji">
+      </div>
+      <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
+        <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Paneer Bhurji</h2>
+        <p class="text-center text-sm md:text-base mt-2 font-inter text-gray-500">
+          Minced cottage cheese stir-fried with onions and tomato lightly spiced with freshly pounded coriander and chillies.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Column 2: Side Menu -->
+  <div id="column2" class="grid grid-cols-1 md:grid-rows-2 gap-8 content-center">
+
+    <!-- Side Item 1 -->
+    <div class="flex flex-col bg-[#FAF9F6] dark:bg-gray-800 p-0">
+      <img src="assets/images/Menu/Mains/hyderabadi-chicken.jpg" alt="Hyderabadi Chicken" class="w-full h-48 object-cover mb-24">
+      <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-10">Hyderabadi Chicken</h2>
+      <p class="text-center px-5 text-sm md:text-base font-inter text-gray-500">
+        Succulent chicken pieces cooked in tandoor simmered off with spices of Hyderabad.
+      </p>
+    </div>
+
+    <!-- Side Item 2 -->
+    <div class="flex flex-col bg-[#FAF9F6] dark:bg-gray-800 p-0">
+      <img src="assets/images/Menu/Mains/amritsari.jpg" alt="Hyderabadi Chicken" class="w-full h-48 object-cover mb-24">
+      <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-10">Amritsari Malai Kofta</h2>
+      <p class="text-center text-sm md:text-base px-5 font-inter text-gray-500">
+        Cottage cheese dumplings, khoya, raisin, nuts, green chillies, cashew gravy and can be served jain on request.
+      </p>
+    </div>
+  </div>
+</div>
+`
+})
+
+startersEl.addEventListener("click", function(){
+sectionEl.innerHTML = `
+ <div id="menu-container" class="lg:px-6">
+
+        <!-- Row 1 -->
+        <div class=" md:flex flex-row lg:grid grid-cols-[1fr_2fr] gap-6">
+          <!-- Left column full height -->
+          <div class="mb-4 flex flex-col bg-[#FAF9F6] dark:bg-gray-800">
+            <img src="assets/images/Menu/Starters/braised-mutton.jpg" alt="Hyderabadi Chicken" class="w-full h-1/3 object-cover mb-36">
+            <h2 class="text-center text-2xl mb-6 lg:text-3xl font-medium mb-12 px-5">Braised Mutton Champ Maple Kokum Glaze</h2>
+            <p class="text-center px-12 text-sm md:text-base font-inter text-gray-500 mb-6">
+              Braised goat rack with maple and kokum syrup, kokum plant called 'garcinia indica' grown in kokan regions of Maharashtra.
+            </p>
           </div>
 
-          <!-- Item 2 -->
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#E0E0DC] dark:bg-gray-800 p-4 md:p-6">
-            <div class="w-full sm:w-1/2">
-              <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/prawns-kolapuri.jpg" alt="Prawns Kolapuri">
+          <!-- Right column with 2 stacked items -->
+          <div class="grid sm: mb-4 grid-rows-2 gap-4">
+            <!-- Item 1 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#FAF9F6] dark:bg-gray-800 p-4 md:p-6">
+              <div class="w-full sm:w-1/2">
+                <img class="w-full h-full object-cover block" src="assets/images/Menu/Mains/butter-chicken-makhani.jpg" alt="Butter Chicken Makhani">
+              </div>
+              <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8 mt-6 sm:mt-24">
+                <h2 class="text-center text-2xl md:text-3xl font-medium mb-6 sm:mb-14">Chilli Chicken</h2>
+                <p class="text-center text-sm md:text-base font-inter text-gray-500">
+                  Crispy fried chicken tossed in a fiery Indo-Chinese sauce made with garlic, soy, and chili, garnished with spring onions. A bold fusion favorite, perfect for spice lovers.
+                </p>
+              </div>
             </div>
-            <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
-              <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Prawns Kolapuri</h2>
-              <p class = "text-center text-sm md:text-base mt-2 font-inter text-gray-500">
-                A classic dish of prawns sautéed with inhouse spicy kolapuri spices.
-              </p>
-            </div>
-          </div>
 
-          <!-- Item 3 -->
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#FAF9F6] dark:bg-gray-800 p-4 md:p-6">
-            <div class="w-full sm:w-1/2">
-              <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/masala-shrooms.jpg" alt="Masala Shrooms">
-            </div>
-            <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
-              <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Pan Toss Masala Shrooms Truffle Haze</h2>
-              <p class="text-center text-sm md:text-base mt-2 font-inter text-gray-500">
-                Assorted mushrooms with cream garlic truffle oil and served with aromatic truffle oil haze.
-              </p>
-            </div>
-          </div>
-
-          <!-- Item 4 -->
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#E0E0DC] dark:bg-gray-800 p-4 md:p-6">
-            <div class="w-full sm:w-1/2">
-              <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/paneer-bhurji.jpg" alt="Paneer Bhurji">
-            </div>
-            <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
-              <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-4">Paneer Bhurji</h2>
-              <p class="text-center text-sm md:text-base mt-2 font-inter text-gray-500">
-                Minced cottage cheese stir-fried with onions and tomato lightly spiced with freshly pounded coriander and chillies.
-              </p>
+            <!-- Item 2 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#E0E0DC] dark:bg-gray-800 px-4 md:px-6">
+              <div class="w-full sm:w-1/2">
+                <img class="w-full h-full object-cover block" src="assets/images/Menu/Mains/prawns-kolapuri.jpg" alt="Prawns Kolapuri">
+              </div>
+              <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8 mt-6 sm:mt-24">
+                <h2 class="text-center text-2xl md:text-3xl font-medium mb-6 sm:mb-14">Chilli Garlic Button Mushrooms</h2>
+                <p class="text-center text-sm md:text-base font-inter text-gray-500">
+                  Juicy button mushrooms stir-fried in a zesty garlic-chili sauce, finished with a hint of soy and a sprinkle of spring onions. A savory delight with a spicy kick
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Column 2: Side Menu -->
-        <div id="column2" class="grid grid-rows-2 gap-8 content-center">
-          
-          <!-- Side Item 1 -->
-          <div class="flex flex-col bg-[#FAF9F6] dark:bg-gray-800 p-0">
-            <img src="assets/images/Menu/Mains/hyderabadi-chicken.jpg" alt="Hyderabadi Chicken" class="w-full h-48 object-cover mb-24">
-            <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-10">Hyderabadi Chicken</h2>
-            <p class="text-center px-5 text-sm md:text-base font-inter text-gray-500">
-              Succulent chicken pieces cooked in tandoor simmered off with spices of Hyderabad.
-            </p>
-          </div>
-
-          <!-- Side Item 2 -->
-          <div class="flex flex-col bg-[#FAF9F6] dark:bg-gray-800 p-0">
-            <img src="assets/images/Menu/Mains/amritsari.jpg" alt="Hyderabadi Chicken" class="w-full h-48 object-cover mb-24">
-            <h2 class="text-center text-base text-2xl md:text-3xl font-medium mb-10">Amritsari Malai Kofta</h2>
+        <!-- Row 2 -->
+        <div class="grid sm:grid-rows-2 md:grid-cols-[2fr_1fr] gap-6">
+          <!-- Left column full height -->
+          <div class="flex flex-col bg-[#FAF9F6] dark:bg-gray-800">
+            <img src="assets/images/Menu/Mains/amritsari.jpg" alt="Amritsari Malai Kofta" class="w-full h-48 object-cover mb-6">
+            <h2 class="text-center text-2xl md:text-3xl font-medium mb-4">Amritsari Malai Kofta</h2>
             <p class="text-center text-sm md:text-base px-5 font-inter text-gray-500">
               Cottage cheese dumplings, khoya, raisin, nuts, green chillies, cashew gravy and can be served jain on request.
             </p>
           </div>
+
+          <!-- Right column with 2 stacked items -->
+          <div class="grid sm:grid-rows-2 gap-6">
+            <!-- Item 3 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#FAF9F6] dark:bg-gray-800 p-4 md:p-6">
+              <div class="w-full sm:w-1/2">
+                <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/masala-shrooms.jpg" alt="Masala Shrooms">
+              </div>
+              <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
+                <h2 class="text-center text-2xl md:text-3xl font-medium mb-4">Pan Toss Masala Shrooms Truffle Haze</h2>
+                <p class="text-center text-sm md:text-base font-inter text-gray-500">
+                  Assorted mushrooms with cream garlic truffle oil and served with aromatic truffle oil haze.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 bg-[#E0E0DC] dark:bg-gray-800 p-4 md:p-6">
+              <div class="w-full sm:w-1/2">
+                <img class="w-full h-56 object-cover block" src="assets/images/Menu/Mains/paneer-bhurji.jpg" alt="Paneer Bhurji">
+              </div>
+              <div class="w-full sm:w-1/2 flex flex-col justify-start pt-4 md:pt-8">
+                <h2 class="text-center text-2xl md:text-3xl font-medium mb-4">Paneer Bhurji</h2>
+                <p class="text-center text-sm md:text-base font-inter text-gray-500">
+                  Minced cottage cheese stir-fried with onions and tomato lightly spiced with freshly pounded coriander and chillies.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-      </div>`
+    </div>`
 })

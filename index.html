@@ -7,6 +7,9 @@
   <link rel="icon" href="assets/logo/favicon.ico" type="image/x-icon"/>
   <!-- Only Playfair Display -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Konkhmer+Sleokchher&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -26,7 +29,8 @@
           },
           fontFamily: {
             sans: ['Playfair Display','serif'],
-            serif: ['Playfair Display','serif']
+            serif: ['Playfair Display','serif'],
+            inter: ['Inter', 'Arial']
           }
         }
       }
@@ -35,40 +39,44 @@
   <link rel="stylesheet" href="dist/output.css"/>
 </head>
 <body class="bg-white text-gray-900 dark:bg-navbar-dark dark:text-white">
-
-  <!-- NAVBAR -->
-  <nav class="fixed inset-x-0 top-0 z-50 bg-brand-light dark:bg-navbar-dark shadow-md">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-4 py-2">
-      <!-- Logo -->
-      <a href="#home" class="flex items-center">
-        <img src="assets/images/logo-image.png" alt="Pistachio logo" class="h-16 w-16 md:h-20 md:w-20"/>
-      </a>
-      <!-- Desktop menu + theme-toggle -->
-      <div class="flex-1 flex justify-center">
-        <ul class="hidden md:flex items-center space-x-8 text-dark-font dark:text-white">
-          <li><a href="#home" class="hover:text-pistachio transition">Home</a></li>
+  <header>
+    <!-- NAVBAR -->
+    <nav class="fixed inset-x-0 top-0 z-50 bg-brand-light dark:bg-navbar-dark shadow-md">
+      <div class="max-w-9xl mx-auto flex items-center justify-between px-6 md:px-4 py-2">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center">
+          <img src="assets/images/logo-image.png" alt="Pistachio logo" class="h-16 w-16 md:h-20 md:w-20"/>
+        </a>
+        <!-- Desktop menu + theme-toggle -->
+        <ul class="hidden md:flex items-center space-x-12 text-dark-font dark:text-white">
+          <li>
+            <a href="#home" class="hover:text-pistachio transition">Home</a>
+          </li>
           <li class="relative group">
             <button class="flex items-center hover:text-pistachio transition">
-              Menu <img src="assets/icons/dropdown-icon.png" class="ml-1 h-3" alt="⌄"/>
+              Menu 
+              <img src="assets/icons/dropdown-icon.png" class="ml-1 h-3" alt="⌄"/>
             </button>
-            <ul class="absolute left-0 mt-2 w-44 rounded bg-white dark:bg-navbar-dark shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            <ul class="absolute left-0 w-44 rounded bg-white dark:bg-navbar-dark shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
               <li><a href="#starter" class="block px-4 py-2 hover:text-pistachio">Starters</a></li>
               <li><a href="#main-courses" class="block px-4 py-2 hover:text-pistachio">Mains</a></li>
               <li><a href="#sides" class="block px-4 py-2 hover:text-pistachio">Sides</a></li>
               <li><a href="#desserts" class="block px-4 py-2 hover:text-pistachio">Desserts</a></li>
             </ul>
           </li>
-          <li><a href="#story" class="hover:text-pistachio transition">Our Story</a></li>
-          <li><a href="#feedback" class="hover:text-pistachio transition">Feedback</a></li>
+          <li>
+            <a href="#story" class="hover:text-pistachio transition">Our Story</a>
+          </li>
+          <li>
+            <a href="#feedback" class="hover:text-pistachio transition">Feedback</a>
+          </li>
+      
         </ul>
-      </div>
-      <div class="md:flex items-center space-x-2 hidden">
-        <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition">
-          <img id="theme-icon" src="assets/icons/dark-mode-icon.png" class="h-5 w-5" alt="Toggle theme"/>
-        </button>
-      </div>
+         <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+            <img id="theme-icon" src="assets/icons/dark-mode-icon.png" class="h-5 w-5" alt="Toggle theme"/>
+         </button>
       <!-- Mobile theme + menu button -->
-      <div class="md:hidden flex items-center space-x-2"
+      <div class="md:hidden flex items-center space-x-2">
         <button id="theme-toggle-mobile" class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition">
           <img id="theme-icon-mobile" src="assets/icons/dark-mode-icon.png" class="h-5 w-5" alt="Toggle theme"/>
         </button>
@@ -90,381 +98,384 @@
       </ul>
     </div>
   </nav>
+  </header>
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="relative h-screen w-full overflow-hidden pt-16 dark:bg-navbar-dark">
+      <div class="absolute inset-0">
+        <div class="hero-slide active absolute inset-0 transition-opacity duration-1000">
+          <img src="assets/images/Hero-img-1.webp" class="w-full h-full object-cover" alt="Slide 1"/>
+        </div>
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="assets/images/Hero-img-2.webp" class="w-full h-full object-cover" alt="Slide 2"/>
+        </div>
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="assets/images/Hero-img-3.webp" class="w-full h-full object-cover" alt="Slide 3"/>
+        </div>
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="assets/images/Hero-img-4.webp" class="w-full h-full object-cover" alt="Slide 4"/>
+        </div>
+      </div>
+      <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
+        <h1 class="flex items-baseline font-serif text-white mb-4 text-5xl md:text-6xl">
+          <span class="text-pistachio">Pistachio</span>
+          <span class="ml-4 text-xl md:text-2xl font-normal text-pistachio">by Masala Twist</span>
+        </h1>
+        <p class="text-white text-lg md:text-xl max-w-2xl mb-6">
+          A refined fusion of Indian and Middle Eastern flavours.
+        </p>
+        <a href="#story" class="inline-block bg-pistachio hover:bg-pistachio/90 text-white px-8 py-3 rounded-full font-medium transition">
+          Explore Our Brand
+        </a>
+      </div>
+      <div class="absolute bottom-6 w-full flex justify-center space-x-2 z-20">
+        <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-100 transition-opacity duration-300"></button>
+        <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300"></button>
+        <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300"></button>
+        <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300"></button>
+      </div>
+    </section>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="relative h-screen w-full overflow-hidden pt-16 dark:bg-navbar-dark">
-    <div class="absolute inset-0">
-      <div class="hero-slide active absolute inset-0 transition-opacity duration-1000">
-        <img src="assets/images/Hero-img-1.webp" class="w-full h-full object-cover" alt="Slide 1"/>
+    <!-- MENU TASTE -->
+  <!-- MENU TASTE SECTION -->
+  <section id="menu-taste" class="py-16 bg-light-gray-bg dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="mb-8 text-center">
+        <img src="assets/icons/menu-section.png" alt="Menu Icon" class="h-6 mx-auto mb-2"/>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark-font dark:text-white">
+          A Taste of <span class="text-pistachio">Pistachio</span>
+        </h2>
       </div>
-      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img src="assets/images/hero-img-2.webp" class="w-full h-full object-cover" alt="Slide 2"/>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Main Course (large) -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="assets/images/menu-preview/main-course.jpg"
+            alt="Main Course"
+            class="w-full h-[600px] object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-4 rounded-lg max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-lg font-semibold font-serif text-dark-font mb-1">Main-Course</h3>
+            <p class="text-sm italic text-dark-font mb-1">
+              “Our hearty mains are crafted with rich, authentic flavors - offering both vegetarian and non-vegetarian options, from classic paneer curries to grilled meats and biryanis”
+            </p>
+            <p class="text-xs text-gray-700">Dish shown: Paneer Tikka Masala</p>
+          </div>
+        </div>
+
+        <!-- Starter + Sides (stacked) -->
+        <div class="space-y-8">
+          <!-- Starter -->
+          <div class="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="assets/images/menu-preview/starter-img.jpg"
+              alt="Starter"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div
+              class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-lg max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h3 class="text-base font-semibold text-dark-font mb-1">Starter</h3>
+              <p class="text-xs italic text-dark-font mb-1">
+                “Begin your journey with light, flavorful starters - from crispy vegetarian bites to spicy kebabs and Middle Eastern mezze.”
+              </p>
+              <p class="text-2xs text-gray-700">Dish shown: Seekh Kebabs</p>
+            </div>
+          </div>
+
+          <!-- Sides -->
+          <div class="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="assets/images/menu-preview/sides.jpg"
+              alt="Sides"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div
+              class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-lg max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h3 class="text-base font-semibold text-dark-font mb-1">Sides</h3>
+              <p class="text-xs italic text-dark-font mb-1">
+                “Complete your meal with fresh-baked breads, seasoned rice and savory accompaniments to pair perfectly with every main.”
+              </p>
+              <p class="text-2xs text-gray-700">Dish shown: Garlic Naan</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img src="assets/images/hero-img-3.webp" class="w-full h-full object-cover" alt="Slide 3"/>
+
+      <!-- Dessert (full width) -->
+      <div class="relative group mt-12 overflow-hidden rounded-lg shadow-lg">
+        <img
+          src="assets/images/menu-preview/dessert.jpg"
+          alt="Dessert"
+          class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div
+          class="absolute bottom-6 left-6 bg-white/70 backdrop-blur-sm p-5 rounded-lg max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <h3 class="text-xl font-semibold text-dark-font mb-1">Desserts</h3>
+          <p class="italic text-sm text-dark-font mb-1">
+            “A sweet ending awaits with indulgent Indian and Middle Eastern treats - rich kulfi, delicate pastries and fusion flavors you will remember.”
+          </p>
+          <p class="text-xs text-gray-700">Dish shown: Pistachio Kulfi & Cream</p>
+        </div>
       </div>
-      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img src="assets/images/hero-img-4.webp" class="w-full h-full object-cover" alt="Slide 4"/>
+
+      <!-- Call to action -->
+      <div class="text-center mt-12">
+        <a
+          href="#"
+          class="inline-block bg-pistachio hover:bg-pistachio/90 text-white font-medium px-8 py-3 rounded-full transition"
+        >
+          View The Full Menu &rarr;
+        </a>
       </div>
-    </div>
-    <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
-      <h1 class="flex items-baseline font-serif text-white mb-4 text-5xl md:text-6xl">
-        <span class="text-pistachio">Pistachio</span>
-        <span class="ml-4 text-xl md:text-2xl font-normal text-pistachio">by Masala Twist</span>
-      </h1>
-      <p class="text-white text-lg md:text-xl max-w-2xl mb-6">
-        A refined fusion of Indian and Middle Eastern flavours.
-      </p>
-      <a href="#story" class="inline-block bg-pistachio hover:bg-pistachio/90 text-white px-8 py-3 rounded-full font-medium transition">
-        Explore Our Brand
-      </a>
-    </div>
-    <div class="absolute bottom-6 w-full flex justify-center space-x-2 z-20">
-      <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-100 transition-opacity duration-300"></button>
-      <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300"></button>
-      <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300"></button>
-      <button class="hero-dot w-3 h-3 rounded-full bg-white opacity-50 transition-opacity duration-300"></button>
     </div>
   </section>
 
-<!-- MENU TASTE SECTION -->
-<section id="menu-taste" class="py-16 bg-white dark:bg-navbar-dark">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Section Header -->
-    <div class="mb-8 text-center">
-      <img src="assets/icons/menu-section.png" alt="Menu Icon" class="h-6 mx-auto mb-2"/>
-      <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark-font dark:text-white">
-        A Taste of <span class="text-pistachio">Pistachio</span>
-      </h2>
-    </div>
 
-    <div class="grid md:grid-cols-2 gap-8">
-      <!-- Main Course (large) -->
-      <div class="relative group overflow-hidden rounded-lg shadow-lg">
-        <img
-          src="assets/images/Menu-preview/main-course.jpg"
-          alt="Main Course"
-          class="w-full h-[600px] object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <div
-          class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-4 rounded-lg max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <h3 class="text-lg font-semibold font-serif text-dark-font mb-1">Main-Course</h3>
-          <p class="text-sm italic text-dark-font mb-1">
-            “Our hearty mains are crafted with rich, authentic flavors - offering both vegetarian and non-vegetarian options, from classic paneer curries to grilled meats and biryanis”
+  <!-- OUR STORY SECTION -->
+  <section id="story" class="py-16 bg-brand-light dark:bg-feedback-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section header -->
+      <div class="mb-8 flex items-center space-x-2">
+        <img src="assets/icons/story-section.png" alt="Story Icon" class="h-6"/>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark-font dark:text-white">
+          Our <span class="text-pistachio">Story</span>
+        </h2>
+      </div>
+      <!-- Two-column grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <!-- IMAGE COLUMN -->
+        <div class="lg:order-1 order-2">
+          <img
+            src="assets/images/Story-section-img.png"
+            alt="Serving food"
+            class="w-full rounded-lg shadow-lg object-cover"
+          />
+        </div>
+        <!-- TEXT COLUMN -->
+        <div class="lg:order-2 order-1">
+          <p class="text-lg text-dark-font dark:text-gray-300 mb-4">
+              At <span class="text-pistachio font-semibold">Pistachio by Masala Twist</span>, food is more than a flavor – it's a feeling.
           </p>
-          <p class="text-xs text-gray-700">Dish shown: Paneer Tikka Masala</p>
+
+          <p class="text-medium-gray-text dark:text-gray-400 mb-4">
+            Founded by the team behind the beloved Masala Twist, Pistachio brings a modern approach to traditional Indian and Middle Eastern cuisine. Our space was designed to feel warm yet refined, where every dish tells a story rooted in culture, spice, and soul.
+          </p>
+          <p class="text-medium-gray-text dark:text-gray-400 mb-8">
+            From slow-cooked curries to smoky grilled meats and fresh vegetarian thalis, our kitchen blends authenticity with a contemporary touch — crafted for those who appreciate thoughtful dining.
+          </p>
+
+          <h3 class="text-xl font-semibold text-dark-font dark:text-white mb-4">Core Values:</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <img src="assets/icons/freshness-icon.png" alt="Freshness" class="h-6 w-6 mt-1">
+              <p>
+                <strong class="text-pistachio">Freshness</strong> – Ingredients sourced daily, prepared with care
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <img src="assets/icons/Culture-icon.png" alt="Culture" class="h-6 w-6 mt-1">
+              <p>
+                <strong class="text-pistachio">Culture</strong> – Flavors inspired by heritage, served with heart
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <img src="assets/icons/experience-icon.png" alt="Experience" class="h-6 w-6 mt-1">
+              <p>
+                <strong class="text-pistachio">Experience</strong> – Every plate is part of a larger story
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Starter + Sides (stacked) -->
-      <div class="space-y-8">
-        <!-- Starter -->
+  <!-- SIGNATURE DISHES -->
+  <section id="signature" class="py-16 bg-white dark:bg-navbar-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="mb-8 text-center">
+        <img src="assets/icons/signature-dishes-section.png" alt="Signature Dishes Icon" class="h-6 mx-auto mb-2"/>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark-font dark:text-white mb-4">
+          Our <span class="text-pistachio">Signature</span> Dishes
+        </h2>
+        <p class="text-medium-gray-text dark:text-gray-400 max-w-2xl mx-auto">
+          Pistachio’s most celebrated creations—curated for flavor, flair and finesse
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Dish 1: no badge -->
         <div class="relative group overflow-hidden rounded-lg shadow-lg">
           <img
-            src="assets/images/Menu-preview/starter-img.jpg"
-            alt="Starter"
-            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            src="assets/images/signature-dishes/braised-mutton.jpg"
+            alt="Braised Mutton Champ Majlis Kekuni Glaze"
+            class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
           />
           <div
-            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-lg max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
-            <h3 class="text-base font-semibold text-dark-font mb-1">Starter</h3>
-            <p class="text-xs italic text-dark-font mb-1">
-              “Begin your journey with light, flavorful starters - from crispy vegetarian bites to spicy kebabs and Middle Eastern mezze.”
+            <h3 class="text-base font-semibold font-serif text-dark-font mb-1">
+              Braised Mutton Champ Maple Kokum Glaze
+            </h3>
+            <p class="text-xs text-dark-font">
+              Braised goat rack with maple and kokum syrup, kokum plant called 'garcinia indica' grown in kokan regions of Maharashtra.
             </p>
-            <p class="text-2xs text-gray-700">Dish shown: Seekh Kebabs</p>
           </div>
         </div>
 
-        <!-- Sides -->
+        <!-- Dish 2: Spicy badge -->
         <div class="relative group overflow-hidden rounded-lg shadow-lg">
           <img
-            src="assets/images/Menu-preview/sides.jpg"
-            alt="Sides"
-            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            src="assets/images/signature-dishes/chilli-chicken.jpg"
+            alt="Chilli Chicken"
+            class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <!-- Spicy tag -->
+          <div class="absolute top-2 right-2">
+            <span class="bg-orange-500 text-white px-2 py-1 text-xs rounded-full flex items-center">
+              <img src="assets/icons/spicy-tag.png" class="inline w-3 h-3 mr-1" alt="Spicy"/> Spicy
+            </span>
+          </div>
+          <div
+            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Chilli Chicken</h3>
+            <p class="text-xs text-dark-font">
+              Succulent boneless chicken tossed in spicy semi dry sauce garnished with spring onions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dish 3: Spicy badge -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="assets/images/signature-dishes/prawns-kolapuri.jpg"
+            alt="Prawns Kolapuri"
+            class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <!-- Spicy tag -->
+          <div class="absolute top-2 right-2">
+            <span class="bg-orange-500 text-white px-2 py-1 text-xs rounded-full flex items-center">
+              <img src="assets/icons/spicy-tag.png" class="inline w-3 h-3 mr-1" alt="Spicy"/> Spicy
+            </span>
+          </div>
+          <div
+            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Prawns Kolapuri</h3>
+            <p class="text-xs text-dark-font">
+              A classic dish of prawns sautéed with inhouse Kolapuri spices.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dish 4: Spicy badge -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="assets/images/signature-dishes/fish-chilli-fry.jpg"
+            alt="Fish Chilli Fry"
+            class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <!-- Spicy tag -->
+          <div class="absolute top-2 right-2">
+            <span class="bg-orange-500 text-white px-2 py-1 text-xs rounded-full flex items-center">
+              <img src="assets/icons/spicy-tag.png" class="inline w-3 h-3 mr-1" alt="Spicy"/> Spicy
+            </span>
+          </div>
+          <div
+            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Fish Chilli Fry</h3>
+            <p class="text-xs text-dark-font">
+              Red snapper marinated with chinese spices deep-fried tossed with bell pepper, onions and a dash of lemon.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dish 5: no badge -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="assets/images/signature-dishes/chicken-biryani.jpg"
+            alt="Chicken Biryani"
+            class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
           />
           <div
-            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-lg max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
-            <h3 class="text-base font-semibold text-dark-font mb-1">Sides</h3>
-            <p class="text-xs italic text-dark-font mb-1">
-              “Complete your meal with fresh-baked breads, seasoned rice and savory accompaniments to pair perfectly with every main.”
+            <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Chicken Biryani</h3>
+            <p class="text-xs text-dark-font">
+              The most trending Indian dish across the globe which is proud of Indian cuisine! Boneless chicken cooked in tandoor served with rich makhani gravy dusted off with dehydrated fenugreek.
             </p>
-            <p class="text-2xs text-gray-700">Dish shown: Garlic Naan</p>
+          </div>
+        </div>
+
+        <!-- Dish 6: no badge -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="assets/images/signature-dishes/butter-chicken-makhani.jpg"
+            alt="Butter Chicken Makhani"
+            class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Butter Chicken Makhani</h3>
+            <p class="text-xs text-dark-font">
+              Tandoor chicken in rich makhani gravy.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dish 7: no badge -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="assets/images/signature-dishes/mac-and-cheese.jpg"
+            alt="Mac & Cheese Arancini"
+            class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Mac & Cheese Arancini</h3>
+            <p class="text-xs text-dark-font">
+              Macaroni and Cheese made in arancini dumpling served with tomato salsa-our humble take on Italian arancini
+            </p>
+          </div>
+        </div>
+
+        <!-- Dish 8: Vegan badge -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="assets/images/signature-dishes/chilli-garlic-mushrooms.jpg"
+            alt="Chilli Garlic Mushrooms"
+            class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <!-- Vegan tag -->
+          <div class="absolute top-2 right-2">
+            <span class="bg-green-600 text-white px-2 py-1 text-xs rounded-full flex items-center">
+              <img src="assets/icons/vegan-tag.png" class="inline w-3 h-3 mr-1" alt="Vegan"/> Vegan
+            </span>
+          </div>
+          <div
+            class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Chilli Garlic Button Mushrooms</h3>
+            <p class="text-xs text-dark-font">
+              Fresh button mushrooms tossed in sharp chilli dry spices topped with spring onions-a must try for every mushroom lover. 
+            </p>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Dessert (full width) -->
-    <div class="relative group mt-12 overflow-hidden rounded-lg shadow-lg">
-      <img
-        src="assets/images/Menu-preview/dessert.jpg"
-        alt="Dessert"
-        class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-      <div
-        class="absolute bottom-6 left-6 bg-white/70 backdrop-blur-sm p-5 rounded-lg max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      >
-        <h3 class="text-xl font-semibold text-dark-font mb-1">Desserts</h3>
-        <p class="italic text-sm text-dark-font mb-1">
-          “A sweet ending awaits with indulgent Indian and Middle Eastern treats - rich kulfi, delicate pastries and fusion flavors you will remember.”
-        </p>
-        <p class="text-xs text-gray-700">Dish shown: Pistachio Kulfi & Cream</p>
-      </div>
-    </div>
-
-    <!-- Call to action -->
-    <div class="text-center mt-12">
-      <a
-        href="#"
-        class="inline-block bg-pistachio hover:bg-pistachio/90 text-white font-medium px-8 py-3 rounded-full transition"
-      >
-        View The Full Menu &rarr;
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- OUR STORY SECTION -->
-<section id="story" class="py-16 bg-brand-light dark:bg-feedback-dark">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Section header -->
-    <div class="mb-8 flex items-center space-x-2">
-      <img src="assets/icons/story-section.png" alt="Story Icon" class="h-6"/>
-      <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark-font dark:text-white">
-        Our <span class="text-pistachio">Story</span>
-      </h2>
-    </div>
-    <!-- Two-column grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <!-- IMAGE COLUMN -->
-      <div class="flex justify-center lg:justify-start lg:order-1 order-2">
-        <img
-          src="assets/images/Story-section-img.png"
-          alt="Serving food"
-          class="w-full max-w-md rounded-lg shadow-lg object-cover"
-        />
-      </div>
-      <!-- TEXT COLUMN -->
-      <div class="lg:order-2 order-1">
-        <p class="text-lg text-dark-font dark:text-gray-300 mb-4">
-            At <span class="text-pistachio font-semibold">Pistachio by Masala Twist</span>, food is more than a flavor – it's a feeling.
-        </p>
-
-        <p class="text-medium-gray-text dark:text-gray-400 mb-4">
-          Founded by the team behind the beloved Masala Twist, Pistachio brings a modern approach to traditional Indian and Middle Eastern cuisine. Our space was designed to feel warm yet refined, where every dish tells a story rooted in culture, spice, and soul.
-        </p>
-        <p class="text-medium-gray-text dark:text-gray-400 mb-8">
-          From slow-cooked curries to smoky grilled meats and fresh vegetarian thalis, our kitchen blends authenticity with a contemporary touch — crafted for those who appreciate thoughtful dining.
-        </p>
-
-        <h3 class="text-xl font-semibold text-dark-font dark:text-white mb-4">Core Values:</h3>
-        <ul class="space-y-4">
-          <li class="flex items-start gap-3">
-            <img src="assets/icons/freshness-icon.png" alt="Freshness" class="h-6 w-6 mt-1">
-            <p>
-              <strong class="text-pistachio">Freshness</strong> – Ingredients sourced daily, prepared with care
-            </p>
-          </li>
-          <li class="flex items-start gap-3">
-            <img src="assets/icons/Culture-icon.png" alt="Culture" class="h-6 w-6 mt-1">
-            <p>
-              <strong class="text-pistachio">Culture</strong> – Flavors inspired by heritage, served with heart
-            </p>
-          </li>
-          <li class="flex items-start gap-3">
-            <img src="assets/icons/experience-icon.png" alt="Experience" class="h-6 w-6 mt-1">
-            <p>
-              <strong class="text-pistachio">Experience</strong> – Every plate is part of a larger story
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
- <!-- SIGNATURE DISHES -->
-<section id="signature" class="py-16 bg-white dark:bg-navbar-dark">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Section Header -->
-    <div class="mb-8 text-center">
-      <img src="assets/icons/signature-dishes-section.png" alt="Signature Dishes Icon" class="h-6 mx-auto mb-2"/>
-      <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark-font dark:text-white mb-4">
-        Our <span class="text-pistachio">Signature</span> Dishes
-      </h2>
-      <p class="text-medium-gray-text dark:text-gray-400 max-w-2xl mx-auto">
-        Pistachio’s most celebrated creations—curated for flavor, flair and finesse
-      </p>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Dish 1: no badge -->
-      <div class="relative group overflow-hidden rounded-lg shadow-lg">
-        <img
-          src="assets/images/signature-dishes/braised-mutton.jpg"
-          alt="Braised Mutton Champ Majlis Kekuni Glaze"
-          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <div
-          class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <h3 class="text-base font-semibold font-serif text-dark-font mb-1">
-            Braised Mutton Champ Maple Kokum Glaze
-          </h3>
-          <p class="text-xs text-dark-font">
-            Braised goat rack with maple and kokum syrup, kokum plant called 'garcinia indica' grown in kokan regions of Maharashtra.
-          </p>
-        </div>
-      </div>
-
-      <!-- Dish 2: Spicy badge -->
-      <div class="relative group overflow-hidden rounded-lg shadow-lg">
-        <img
-          src="assets/images/signature-dishes/chilli-chicken.jpg"
-          alt="Chilli Chicken"
-          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <!-- Spicy tag -->
-        <div class="absolute top-2 right-2">
-          <span class="bg-orange-500 text-white px-2 py-1 text-xs rounded-full flex items-center">
-            <img src="assets/icons/spicy-tag.png" class="inline w-3 h-3 mr-1" alt="Spicy"/> Spicy
-          </span>
-        </div>
-        <div
-          class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Chilli Chicken</h3>
-          <p class="text-xs text-dark-font">
-            Succulent boneless chicken tossed in spicy semi dry sauce garnished with spring onions.
-          </p>
-        </div>
-      </div>
-
-      <!-- Dish 3: Spicy badge -->
-      <div class="relative group overflow-hidden rounded-lg shadow-lg">
-        <img
-          src="assets/images/signature-dishes/prawns-kolapuri.jpg"
-          alt="Prawns Kolapuri"
-          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <!-- Spicy tag -->
-        <div class="absolute top-2 right-2">
-          <span class="bg-orange-500 text-white px-2 py-1 text-xs rounded-full flex items-center">
-            <img src="assets/icons/spicy-tag.png" class="inline w-3 h-3 mr-1" alt="Spicy"/> Spicy
-          </span>
-        </div>
-        <div
-          class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Prawns Kolapuri</h3>
-          <p class="text-xs text-dark-font">
-            A classic dish of prawns sautéed with inhouse Kolapuri spices.
-          </p>
-        </div>
-      </div>
-
-      <!-- Dish 4: Spicy badge -->
-      <div class="relative group overflow-hidden rounded-lg shadow-lg">
-        <img
-          src="assets/images/signature-dishes/fish-chilli-fry.jpg"
-          alt="Fish Chilli Fry"
-          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <!-- Spicy tag -->
-        <div class="absolute top-2 right-2">
-          <span class="bg-orange-500 text-white px-2 py-1 text-xs rounded-full flex items-center">
-            <img src="assets/icons/spicy-tag.png" class="inline w-3 h-3 mr-1" alt="Spicy"/> Spicy
-          </span>
-        </div>
-        <div
-          class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Fish Chilli Fry</h3>
-          <p class="text-xs text-dark-font">
-            Red snapper marinated with chinese spices deep-fried tossed with bell pepper, onions and a dash of lemon.
-          </p>
-        </div>
-      </div>
-
-      <!-- Dish 5: no badge -->
-      <div class="relative group overflow-hidden rounded-lg shadow-lg">
-        <img
-          src="assets/images/signature-dishes/chicken-biryani.jpg"
-          alt="Chicken Biryani"
-          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <div
-          class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Chicken Biryani</h3>
-          <p class="text-xs text-dark-font">
-            The most trending Indian dish across the globe which is proud of Indian cuisine! Boneless chicken cooked in tandoor served with rich makhani gravy dusted off with dehydrated fenugreek.
-          </p>
-        </div>
-      </div>
-
-      <!-- Dish 6: no badge -->
-      <div class="relative group overflow-hidden rounded-lg shadow-lg">
-        <img
-          src="assets/images/signature-dishes/butter-chicken-makhani.jpg"
-          alt="Butter Chicken Makhani"
-          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <div
-          class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Butter Chicken Makhani</h3>
-          <p class="text-xs text-dark-font">
-            Tandoor chicken in rich makhani gravy.
-          </p>
-        </div>
-      </div>
-
-      <!-- Dish 7: no badge -->
-      <div class="relative group overflow-hidden rounded-lg shadow-lg">
-        <img
-          src="assets/images/signature-dishes/mac-and-cheese.jpg"
-          alt="Mac & Cheese Arancini"
-          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <div
-          class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Mac & Cheese Arancini</h3>
-          <p class="text-xs text-dark-font">
-            Macaroni and Cheese made in arancini dumpling served with tomato salsa-our humble take on Italian arancini
-          </p>
-        </div>
-      </div>
-
-      <!-- Dish 8: Vegan badge -->
-      <div class="relative group overflow-hidden rounded-lg shadow-lg">
-        <img
-          src="assets/images/signature-dishes/chilli-garlic-mushrooms.jpg"
-          alt="Chilli Garlic Mushrooms"
-          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <!-- Vegan tag -->
-        <div class="absolute top-2 right-2">
-          <span class="bg-green-600 text-white px-2 py-1 text-xs rounded-full flex items-center">
-            <img src="assets/icons/vegan-tag.png" class="inline w-3 h-3 mr-1" alt="Vegan"/> Vegan
-          </span>
-        </div>
-        <div
-          class="absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-3 rounded-md max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <h3 class="text-base font-semibold font-serif text-dark-font mb-1">Chilli Garlic Button Mushrooms</h3>
-          <p class="text-xs text-dark-font">
-            Fresh button mushrooms tossed in sharp chilli dry spices topped with spring onions-a must try for every mushroom lover. 
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- REVIEWS SECTION -->
   <section id="reviews" class="py-16 bg-brand-light dark:bg-feedback-dark">
@@ -535,15 +546,16 @@
       </div>
     </div>
   </section>
+  
 
- <!-- CHATBOT TOGGLE BUTTON -->
-<div
-  id="chatbot-toggle"
-  class="fixed bottom-6 right-6 z-50 bg-pistachio hover:bg-pistachio/90 p-4 rounded-full shadow-lg cursor-pointer transition-all duration-300"
->
-  <img src="assets/icons/chatbot-floating-icon.png" class="w-6 h-6" alt="Chatbot Icon"/>
-</div>
-
+  <!-- CHATBOT TOGGLE BUTTON -->
+  <div
+    id="chatbot-toggle"
+    class="fixed bottom-6 right-6 z-50 bg-pistachio hover:bg-pistachio/90 p-4 rounded-full shadow-lg cursor-pointer transition-all duration-300"
+  >
+    <img src="assets/icons/chatbot-floating-icon.png" class="w-6 h-6" alt="Chatbot Icon"/>
+  </div>
+</main>
 <!-- FOOTER -->
 <footer class="bg-brand-light dark:bg-feedback-dark text-dark-font dark:text-gray-300">
   <!-- Top row: 5 columns -->
@@ -683,7 +695,5 @@
   </div>
 
   <script src="scripts/main.js"></script>
-  <script src="scripts/chatbot.js"></script>
-
 </body>
 </html>
