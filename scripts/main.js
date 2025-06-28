@@ -74,18 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme('light');
   }
 
-
-  // —— CHATBOT UI TOGGLE & CLOSE ——
-  const chatToggle = document.getElementById('chatbot-toggle');
-  const chatUI     = document.getElementById('chatbot-ui');
-  const chatClose  = document.getElementById('close-chatbot');
-
-  chatToggle.addEventListener('click', () => {
-    chatUI.classList.toggle('hidden');
-  });
-  chatClose.addEventListener('click', () => {
-    chatUI.classList.add('hidden');
-  });
 });
 
 
